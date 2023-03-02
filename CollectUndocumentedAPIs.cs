@@ -133,7 +133,7 @@ public static class CollectUndocumentedAPIs
     {
         var folder = Path.GetDirectoryName(callerFilePath);
         Assert.IsNotNull(folder);
-        var fileName = $"Unity {Application.unityVersion} Undocumented APIs.md";
+        var fileName = $"Unity_{Application.unityVersion.Replace(' ', '_')}_Undocumented_APIs.md";
         var filePath = Path.Combine(folder, fileName);
         if (File.Exists(filePath))
         {
