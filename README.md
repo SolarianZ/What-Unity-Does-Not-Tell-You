@@ -8,6 +8,8 @@ What-Unity-Does-Not-Tell-You
 
 *Tip: Press **Ctrl+F** on the list page to search for the keyword of the content you are looking for.*
 
+- [Unity 2021.3.0f1 Undocumented APIs](./Unity_2021.3.0f1_Undocumented_APIs.md)
+- [Unity 2020.3.0f1 Undocumented APIs](./Unity_2020.3.0f1_Undocumented_APIs.md)
 - [Unity 2019.4.0f1 Undocumented APIs](./Unity_2019.4.0f1_Undocumented_APIs.md)
 
 

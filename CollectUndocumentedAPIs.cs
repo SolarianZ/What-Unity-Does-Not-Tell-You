@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -16,8 +17,7 @@ public static class CollectUndocumentedAPIs
         result.AppendLine($"Unity {Application.unityVersion} undocumented APIs")
             .AppendLine("===")
             .AppendLine()
-            .AppendLine(
-                "Non-public, interface, abstract, generic, nested, delegate and totally obsoleted items are excluded.")
+            .AppendLine("Non-public, interface, abstract, generic, nested, delegate and obsoleted items are excluded.")
             .AppendLine();
 
         var engineFolder = EditorApplication.applicationPath
@@ -31,6 +31,7 @@ public static class CollectUndocumentedAPIs
             return;
         }
 
+        var typeMemberNameSet = new HashSet<string>();
         foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
             if (assembly.IsDynamic || !assembly.Location.Contains("Editor\\Data\\Managed"))
@@ -44,22 +45,29 @@ public static class CollectUndocumentedAPIs
                 // Ignore nested types and totally obsoleted types
                 if (!type.IsPublic || type.IsInterface || type.IsAbstract || type.IsGenericType ||
                     type.BaseType == typeof(MulticastDelegate) ||
-                    (type.GetCustomAttribute<ObsoleteAttribute>()?.IsError ?? false))
+                    type.GetCustomAttribute<ObsoleteAttribute>() != null)
                 {
                     continue;
                 }
 
                 string typeDocUrlNoDotHtml;
-                var lastDotIndexInNamespace = type.Namespace?.LastIndexOf('.') ?? -1;
-                if (lastDotIndexInNamespace > -1)
+                if (type.Namespace?.StartsWith("Unity.") ?? false)
                 {
-                    // ReSharper disable once PossibleNullReferenceException
-                    var directNamespace = type.Namespace.Substring(lastDotIndexInNamespace + 1);
-                    typeDocUrlNoDotHtml = $"{docFolder}{directNamespace}.{type.Name}";
+                    typeDocUrlNoDotHtml = $"{docFolder}{type.Namespace}.{type.Name}";
                 }
                 else
                 {
-                    typeDocUrlNoDotHtml = $"{docFolder}{type.Name}";
+                    var firstDotIndexInNamespace = type.Namespace?.IndexOf('.') ?? -1;
+                    if (firstDotIndexInNamespace > -1)
+                    {
+                        // ReSharper disable once PossibleNullReferenceException
+                        var directNamespace = type.Namespace.Substring(firstDotIndexInNamespace + 1);
+                        typeDocUrlNoDotHtml = $"{docFolder}{directNamespace}.{type.Name}";
+                    }
+                    else
+                    {
+                        typeDocUrlNoDotHtml = $"{docFolder}{type.Name}";
+                    }
                 }
 
                 var appendType = true;
@@ -75,6 +83,7 @@ public static class CollectUndocumentedAPIs
 
                     appendType = false;
                     result.AppendLine($"    - [Type] {type.FullName}");
+                    // Debug.Log($"{typeDocUrlNoDotHtml}.html");
                 }
 
                 if (type.IsEnum)
@@ -82,29 +91,52 @@ public static class CollectUndocumentedAPIs
                     continue;
                 }
 
+                typeMemberNameSet.Clear();
                 foreach (var member in type.GetMembers())
                 {
-                    // member.MemberType
+                    if (typeMemberNameSet.Contains(member.Name))
+                    {
+                        continue;
+                    }
+
                     if (member.DeclaringType != type ||
                         (member.MemberType & MemberTypes.Constructor) != 0 ||
                         (member.MemberType & MemberTypes.NestedType) != 0 ||
                         member.Name.StartsWith("get_") ||
-                        member.Name.StartsWith("get_") ||
                         member.Name.StartsWith("set_") ||
                         member.Name.StartsWith("op_") ||
                         member.Name.StartsWith("add_") ||
+                        member.Name.StartsWith("remove_") ||
                         member.Name.StartsWith("Equals") ||
                         member.Name.StartsWith("GetHashCode") ||
                         member.Name.StartsWith("ToString") ||
                         // member.Name.StartsWith("value__") || // For enum type
-                        (type.GetCustomAttribute<ObsoleteAttribute>()?.IsError ?? false))
+                        member.GetCustomAttribute<ObsoleteAttribute>() != null)
                     {
                         continue;
+                    }
+
+                    if (member is MethodInfo method && method.IsVirtual)
+                    {
+                        continue;
+                    }
+
+                    if (member is PropertyInfo property)
+                    {
+                        var getMethod = property.GetMethod;
+                        var setMethod = property.SetMethod;
+                        if ((getMethod != null && getMethod.GetBaseDefinition() != getMethod) ||
+                            (setMethod != null && setMethod.GetBaseDefinition() != setMethod))
+                        {
+                            continue;
+                        }
                     }
 
                     if (!File.Exists($"{typeDocUrlNoDotHtml}.{member.Name}.html") &&
                         !File.Exists($"{typeDocUrlNoDotHtml}-{member.Name}.html"))
                     {
+                        typeMemberNameSet.Add(member.Name);
+
                         if (appendType)
                         {
                             if (appendAssembly)
@@ -120,6 +152,9 @@ public static class CollectUndocumentedAPIs
                         }
 
                         result.AppendLine($"        - [{member.MemberType.ToString()}] {member.Name}");
+
+                        // Debug.Log($"{typeDocUrlNoDotHtml}.{member.Name}.html");
+                        // Debug.Log($"{typeDocUrlNoDotHtml}-{member.Name}.html");
                     }
                 }
             }

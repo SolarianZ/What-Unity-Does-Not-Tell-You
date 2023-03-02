@@ -1,4 +1,4 @@
-﻿Unity 2019.4.0f1 undocumented APIs
+﻿Unity 2021.3.0f1 undocumented APIs
 ===
 
 Non-public, interface, abstract, generic, nested, delegate and obsoleted items are excluded.
@@ -6,6 +6,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll
     - [Type] UnityEngine.AI.NavMeshAgent
         - [Property] pathEndPosition
+    - [Type] UnityEngine.AI.NavMeshBuildSettings
+        - [Property] preserveTilesOutsideBounds
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll
     - [Type] UnityEngine.AndroidJavaException
     - [Type] UnityEngine.jvalue
@@ -21,6 +23,13 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll
     - [Type] UnityEngine.Animator
         - [Property] logWarnings
+    - [Type] UnityEngine.AnimationPlayMode
+    - [Type] UnityEngine.Animation
+        - [Method] SyncLayer
+        - [Method] GetClip
+        - [Property] Item
+    - [Type] UnityEngine.AnimationState
+        - [Property] layer
     - [Type] UnityEngine.AnimatorOverrideController
         - [Property] Item
     - [Type] UnityEngine.Motion
@@ -31,13 +40,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] isLooping
         - [Property] legacy
         - [Property] isHumanMotion
-    - [Type] UnityEngine.AnimationPlayMode
-    - [Type] UnityEngine.Animation
-        - [Method] SyncLayer
-        - [Method] GetClip
-        - [Property] Item
-    - [Type] UnityEngine.AnimationState
-        - [Property] layer
     - [Type] UnityEngine.Animations.AnimationPlayableOutput
         - [Property] Null
     - [Type] UnityEngine.Animations.AnimationScriptPlayable
@@ -52,6 +54,10 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] level
         - [Property] blockSize
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll
+    - [Type] UnityEngine.AudioSource
+        - [Method] SetGamepadSpeakerMixLevel
+        - [Method] SetGamepadSpeakerMixLevelDefault
+        - [Method] SetGamepadSpeakerRestrictedAudio
     - [Type] UnityEngine.AudioBehaviour
     - [Type] UnityEngine.WebCamFlags
     - [Type] UnityEngine.Audio.AudioClipPlayable
@@ -86,6 +92,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngineInternal.TypeInferenceRules
     - [Type] UnityEngineInternal.TypeInferenceRuleAttribute
     - [Type] UnityEngineInternal.GenericStack
+    - [Type] Unity.Profiling.ProfilerCounterOptions
     - [Type] Unity.Collections.NativeMatchesParallelForLengthAttribute
     - [Type] JetBrains.Annotations.CanBeNullAttribute
     - [Type] JetBrains.Annotations.NotNullAttribute
@@ -147,6 +154,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.Camera
         - [Method] RenderDontRestore
         - [Method] SetupCurrent
+        - [Property] sceneViewFilterMode
     - [Type] UnityEngine.ReflectionProbe
         - [Property] minBakedCubemapResolution
         - [Property] maxBakedCubemapResolution
@@ -154,6 +162,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] DebugBreak
     - [Type] UnityEngine.EventProvider
         - [Method] WriteCustomEvent
+    - [Type] UnityEngine.LightingSettings
+        - [Property] sampling
     - [Type] UnityEngine.Display
         - [Event] onDisplaysUpdated
     - [Type] UnityEngine.Light
@@ -168,8 +178,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.RenderTexture
         - [Property] format
         - [Property] isPowerOfTwo
-    - [Type] UnityEngine.RenderTextureDescriptor
-        - [Property] colorFormat
     - [Type] UnityEngine.Handheld
         - [Method] ClearShaderCache
     - [Type] UnityEngine.iPhoneSettings
@@ -204,8 +212,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] Item
         - [Field] kEpsilon
     - [Type] UnityEngine.Mathf
-        - [Method] FloatToHalf
-        - [Method] HalfToFloat
         - [Method] Gamma
     - [Type] UnityEngine.Vector2
         - [Property] Item
@@ -274,6 +280,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.Rendering.ReflectionProbeType
     - [Type] UnityEngine.Rendering.CommandBuffer
         - [Method] Release
+        - [Method] ProcessVTFeedback
     - [Type] UnityEngine.Rendering.SphericalHarmonicsL2
         - [Property] Item
     - [Type] UnityEngine.Playables.Playable
@@ -305,6 +312,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.Experimental.Rendering.GraphicsFormatUtility
         - [Method] GetGraphicsFormat
         - [Method] GetTextureFormat
+        - [Method] GetDepthBits
+        - [Method] GetDepthStencilFormat
         - [Method] IsSRGBFormat
         - [Method] IsSwizzleFormat
         - [Method] GetSRGBFormat
@@ -365,11 +374,14 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.SocialPlatforms.Impl.UserProfile
         - [Method] SetUserName
         - [Method] SetUserID
+        - [Method] SetLegacyUserID
+        - [Method] SetUserGameID
         - [Method] SetImage
         - [Method] SetIsFriend
         - [Method] SetState
         - [Property] userName
         - [Property] id
+        - [Property] gameId
         - [Property] isFriend
         - [Property] state
         - [Property] image
@@ -522,6 +534,10 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.ParticleSystemJobs.ParticleSystemNativeArray4
         - [Property] Item
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll
+    - [Type] UnityEngine.ArticulationReducedSpace
+        - [Property] Item
+    - [Type] UnityEngine.ArticulationJacobian
+        - [Property] Item
     - [Type] UnityEngine.Physics
         - [Property] interCollisionSettingsToggle
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll
@@ -541,10 +557,138 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll
     - [Type] UnityEngine.Terrain
         - [Property] heightmapTextureFormat
-    - [Type] UnityEngine.DetailPrototype
-        - [Property] usePrototypeMesh
     - [Type] UnityEngine.SplatPrototype
         - [Property] specular
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreFontEngineModule.dll
+    - [Type] UnityEngine.TextCore.LowLevel.FontFeatureLookupFlags
+    - [Type] UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord
+        - [Property] featureLookupFlags
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreTextEngineModule.dll
+    - [Type] UnityEngine.TextCore.Text.Character
+    - [Type] UnityEngine.TextCore.Text.FastAction
+        - [Method] Add
+        - [Method] Remove
+        - [Method] Call
+    - [Type] UnityEngine.TextCore.Text.TextFontWeight
+    - [Type] UnityEngine.TextCore.Text.FontWeightPair
+        - [Field] regularTypeface
+        - [Field] italicTypeface
+    - [Type] UnityEngine.TextCore.Text.FontAssetCreationEditorSettings
+        - [Field] sourceFontFileGUID
+        - [Field] faceIndex
+        - [Field] pointSizeSamplingMode
+        - [Field] pointSize
+        - [Field] padding
+        - [Field] packingMode
+        - [Field] atlasWidth
+        - [Field] atlasHeight
+        - [Field] characterSetSelectionMode
+        - [Field] characterSequence
+        - [Field] referencedFontAssetGUID
+        - [Field] referencedTextAssetGUID
+        - [Field] fontStyle
+        - [Field] fontStyleModifier
+        - [Field] renderMode
+        - [Field] includeFontFeatures
+    - [Type] UnityEngine.TextCore.Text.AtlasPopulationMode
+    - [Type] UnityEngine.TextCore.Text.FontAsset
+        - [Method] CreateFontAsset
+        - [Method] ReadFontAssetDefinition
+        - [Method] HasCharacter
+        - [Method] HasCharacters
+        - [Method] GetCharacters
+        - [Method] GetCharactersArray
+        - [Method] TryAddCharacters
+        - [Method] ClearFontAssetData
+        - [Property] sourceFontFile
+        - [Property] atlasPopulationMode
+        - [Property] faceInfo
+        - [Property] fontWeightTable
+        - [Property] glyphTable
+        - [Property] glyphLookupTable
+        - [Property] characterTable
+        - [Property] characterLookupTable
+        - [Property] atlasTexture
+        - [Property] atlasTextures
+        - [Property] atlasTextureCount
+        - [Property] isMultiAtlasTexturesEnabled
+        - [Property] atlasWidth
+        - [Property] atlasHeight
+        - [Property] atlasPadding
+        - [Property] atlasRenderMode
+        - [Property] fontFeatureTable
+        - [Property] fallbackFontAssetTable
+        - [Property] fontAssetCreationEditorSettings
+        - [Property] regularStyleWeight
+        - [Property] regularStyleSpacing
+        - [Property] boldStyleWeight
+        - [Property] boldStyleSpacing
+        - [Property] italicStyleSlant
+        - [Property] tabMultiple
+    - [Type] UnityEngine.TextCore.Text.FontFeatureTable
+        - [Method] SortGlyphPairAdjustmentRecords
+    - [Type] UnityEngine.TextCore.Text.SpriteAsset
+        - [Method] UpdateLookupTables
+        - [Method] GetSpriteIndexFromHashcode
+        - [Method] GetSpriteIndexFromUnicode
+        - [Method] GetSpriteIndexFromName
+        - [Method] SearchForSpriteByUnicode
+        - [Method] SearchForSpriteByHashCode
+        - [Method] SortGlyphTable
+        - [Property] faceInfo
+        - [Property] spriteSheet
+        - [Property] spriteCharacterTable
+        - [Property] spriteCharacterLookupTable
+        - [Property] spriteGlyphTable
+        - [Field] fallbackSpriteAssets
+    - [Type] UnityEngine.TextCore.Text.SpriteCharacter
+        - [Property] name
+        - [Property] hashCode
+    - [Type] UnityEngine.TextCore.Text.SpriteGlyph
+        - [Field] sprite
+    - [Type] UnityEngine.TextCore.Text.ColorGradientMode
+    - [Type] UnityEngine.TextCore.Text.TextColorGradient
+        - [Field] colorMode
+        - [Field] topLeft
+        - [Field] topRight
+        - [Field] bottomLeft
+        - [Field] bottomRight
+    - [Type] UnityEngine.TextCore.Text.TextElementType
+    - [Type] UnityEngine.TextCore.Text.FontStyles
+    - [Type] UnityEngine.TextCore.Text.TextSettings
+        - [Property] version
+        - [Property] defaultFontAsset
+        - [Property] defaultFontAssetPath
+        - [Property] fallbackFontAssets
+        - [Property] matchMaterialPreset
+        - [Property] missingCharacterUnicode
+        - [Property] clearDynamicDataOnBuild
+        - [Property] defaultSpriteAsset
+        - [Property] defaultSpriteAssetPath
+        - [Property] fallbackSpriteAssets
+        - [Property] missingSpriteCharacterUnicode
+        - [Property] defaultStyleSheet
+        - [Property] styleSheetsResourcePath
+        - [Property] defaultColorGradientPresetsPath
+        - [Property] lineBreakingRules
+        - [Property] displayWarnings
+    - [Type] UnityEngine.TextCore.Text.TextStyle
+        - [Method] RefreshStyle
+        - [Property] NormalStyle
+        - [Property] name
+        - [Property] hashCode
+        - [Property] styleOpeningDefinition
+        - [Property] styleClosingDefinition
+        - [Property] styleOpeningTagArray
+        - [Property] styleClosingTagArray
+    - [Type] UnityEngine.TextCore.Text.TextStyleSheet
+        - [Method] GetStyle
+        - [Method] RefreshStyles
+    - [Type] UnityEngine.TextCore.Text.UnicodeLineBreakingRules
+        - [Property] lineBreakingRules
+        - [Property] leadingCharacters
+        - [Property] followingCharacters
+        - [Property] useModernHangulLineBreakingRules
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll
     - [Type] UnityEngine.Font
         - [Property] fontNames
@@ -557,38 +701,23 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] WorldToScreenPoint
         - [Method] CalculateRelativeRectTransformBounds
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll
-    - [Type] UnityEngine.UIElements.Foldout
-        - [Property] text
-    - [Type] UnityEngine.UIElements.ListView
-        - [Method] OnKeyDown
-    - [Type] UnityEngine.UIElements.ScrollView
-        - [Field] horizontalVariantUssClassName
-        - [Field] verticalVariantUssClassName
-        - [Field] verticalHorizontalVariantUssClassName
-        - [Field] scrollVariantUssClassName
-    - [Type] UnityEngine.UIElements.TemplateContainer
-        - [Property] templateId
     - [Type] UnityEngine.UIElements.VisualElement
-        - [Method] ClearClassList
-        - [Method] AddToClassList
-        - [Method] RemoveFromClassList
-        - [Method] ClassListContains
-        - [Property] transform
-        - [Property] layout
-        - [Property] contentRect
-        - [Property] worldBound
-        - [Property] localBound
-        - [Property] worldTransform
-        - [Property] name
-        - [Property] visible
-        - [Property] parent
-        - [Property] panel
         - [Property] Item
     - [Type] UnityEngine.UIElements.VisualElementStyleSheetSet
         - [Property] Item
+    - [Type] UnityEngine.UIElements.ScrollView
+        - [Field] scrollVariantUssClassName
+    - [Type] UnityEngine.UIElements.Scale
+        - [Property] value
+    - [Type] UnityEngine.UIElements.TransformOrigin
+        - [Property] x
+        - [Property] y
+        - [Property] z
+    - [Type] UnityEngine.UIElements.Translate
+        - [Property] x
+        - [Property] y
+        - [Property] z
     - [Type] UnityEngine.UIElements.CreationContext
-        - [Property] target
-        - [Property] visualTreeAsset
         - [Property] slotInsertionPoints
         - [Field] Default
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll
@@ -618,9 +747,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll
     - [Type] UnityEngineInternal.XR.WSA.RemoteSpeechAccess
     - [Type] UnityEngine.XR.WSA.RemoteDeviceVersion
-    - [Type] UnityEngine.XR.WSA.HolographicRemoting
-        - [Method] Connect
-        - [Method] Disconnect
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll
     - [Type] UnityEngine.Experimental.Video.VideoClipPlayable
         - [Method] GetClip
@@ -634,7 +760,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll
     - [Type] UnityEngine.XR.XRDisplaySubsystem
         - [Property] sRGB
-- [Assembly] Editor/Data/Managed/UnityEditor.dll
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll
     - [Type] TreeEditor.TreeData
         - [Method] GetGroup
         - [Method] GetNode
@@ -893,8 +1019,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Open
     - [Type] UnityEditorInternal.AssetStoreToolUtils
         - [Method] BuildAssetStoreAssetBundle
-        - [Method] PreviewAssetStoreAssetBundleInInspector
-        - [Method] UpdatePreloadingInternal
     - [Type] UnityEditorInternal.BlendTreePreviewUtility
         - [Method] GetRootBlendTreeChildWeights
         - [Method] CalculateRootBlendTreeChildWeights
@@ -925,7 +1049,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] CalculateHashForObjectsAndDependencies
         - [Method] ExecuteCommandOnKeyWindow
         - [Method] InstantiateMaterialsInEditMode
-        - [Method] BuildCanBeAppended
         - [Method] SwitchSkinAndRepaintAllViews
         - [Method] RepaintAllViews
         - [Method] GetIsInspectorExpanded
@@ -938,7 +1061,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] HierarchyWindowDragByID
         - [Method] SceneViewDrag
         - [Method] SetRectTransformTemporaryRect
-        - [Method] HasTeamLicense
         - [Method] HasPro
         - [Method] HasFreeLicense
         - [Method] HasEduLicense
@@ -965,6 +1087,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] GetUnityVersion
         - [Method] GetUnityVersionDigits
         - [Method] GetUnityBuildBranch
+        - [Method] GetUnityBuildHash
+        - [Method] GetUnityDisplayVersion
+        - [Method] GetUnityDisplayVersionVerbose
         - [Method] GetUnityVersionDate
         - [Method] GetUnityRevision
         - [Method] IsUnityBeta
@@ -1036,7 +1161,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] GetRegistryStringValue
     - [Type] UnityEditorInternal.ScriptEditorUtility
         - [Method] GetExternalScriptEditor
-        - [Method] GetExternalScriptEditorArgs
     - [Type] UnityEditorInternal.InternalSpriteUtility
         - [Method] GenerateAutomaticSpriteRectangles
         - [Method] GenerateGridSpriteRectangles
@@ -1045,6 +1169,11 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditorInternal.AssemblyDefinitionReferenceImporter
     - [Type] UnityEditorInternal.AssemblyDefinitionReferenceAsset
     - [Type] UnityEditorInternal.ReorderableList
+        - [Method] ClearSelection
+        - [Method] Select
+        - [Method] SelectRange
+        - [Method] IsSelected
+        - [Method] Deselect
         - [Method] DoLayoutList
         - [Method] DoList
         - [Method] GetHeight
@@ -1055,6 +1184,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] serializedProperty
         - [Property] list
         - [Property] index
+        - [Property] selectedIndices
+        - [Property] multiSelect
         - [Property] draggable
         - [Property] count
         - [Field] drawHeaderCallback
@@ -1095,8 +1226,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditorInternal.UnityEventDrawer
         - [Method] OnGUI
         - [Method] IsPersistantListenerValid
-    - [Type] UnityEditorInternal.PackageManifestImporter
-    - [Type] UnityEditorInternal.PackageManifest
     - [Type] UnityEditorInternal.ProfilerFrameDataMultiColumnHeader
         - [Method] GetMultiColumnHeaderIndex
         - [Method] GetProfilerColumn
@@ -1157,6 +1286,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] entryIndex
         - [Field] out_Id
         - [Field] out_Path
+        - [Field] out_PathMarkerIds
         - [Field] out_CallstackInfo
         - [Field] out_MetaData
     - [Type] UnityEditorInternal.NativeProfilerTimeline_GetEntryTimingInfoArgs
@@ -1169,12 +1299,24 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] out_Duration
         - [Field] out_TotalDurationForFrame
         - [Field] out_InstanceCountForFrame
+    - [Type] UnityEditorInternal.NativeProfilerTimeline_GetEntryPositionInfoArgs
+        - [Method] Reset
+        - [Field] frameIndex
+        - [Field] threadIndex
+        - [Field] sampleIndex
+        - [Field] timeOffset
+        - [Field] threadRect
+        - [Field] shownAreaRect
+        - [Field] out_Position
+        - [Field] out_Size
+        - [Field] out_Depth
     - [Type] UnityEditorInternal.NativeProfilerTimeline
         - [Method] Initialize
         - [Method] Draw
         - [Method] GetEntryAtPosition
         - [Method] GetEntryInstanceInfo
         - [Method] GetEntryTimingInfo
+        - [Method] GetEntryPositionInfo
     - [Type] UnityEditorInternal.MemoryInfoGCReason
     - [Type] UnityEditorInternal.ProfilerMemoryRecordMode
     - [Type] UnityEditorInternal.InstrumentedAssemblyTypes
@@ -1221,7 +1363,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] minDist
         - [Field] maxDist
         - [Field] time
-        - [Field] duration
+        - [Field] maxRMSLevelOrDuration
         - [Field] frequency
     - [Type] UnityEditorInternal.AudioProfilerDSPInfo
         - [Field] id
@@ -1243,6 +1385,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] age
         - [Field] disposed
         - [Field] numChannelInstances
+        - [Field] numClones
+        - [Field] refCount
+        - [Field] instancePtr
     - [Type] UnityEditorInternal.BatchBreakingReason
     - [Type] UnityEditorInternal.UISystemProfilerInfo
         - [Field] objectInstanceId
@@ -1289,30 +1434,13 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] frameGpuTime
         - [Property] frameDataReady
     - [Type] UnityEditorInternal.VR.VREditor
-        - [Method] IsDeviceListDirty
-        - [Method] ClearDeviceListDirty
-        - [Method] GetEnabledVRDeviceInfo
-        - [Method] IsVRDeviceEnabledForBuildTarget
-        - [Method] GetAvailableVirtualRealitySDKs
-        - [Method] GetVirtualRealitySDKs
-        - [Method] SetVirtualRealitySDKs
-        - [Method] GetAllVRDeviceInfo
-        - [Method] GetAllVRDeviceInfoByTarget
         - [Method] GetVREnabledOnTargetGroup
         - [Method] SetVREnabledOnTargetGroup
-        - [Method] GetVREnabledDevicesOnTargetGroup
-        - [Method] GetVREnabledDevicesOnTarget
         - [Method] NativeSetVREnabledDevicesOnTargetGroup
         - [Method] SetVREnabledDevicesOnTargetGroup
-    - [Type] UnityEditorInternal.VR.VRModule
-        - [Method] SetupBuildSettings
-        - [Method] ShouldInjectVRDependenciesForBuildTarget
-    - [Type] UnityEditorInternal.VR.VRDeviceInfoEditor
-        - [Field] deviceNameKey
-        - [Field] deviceNameUI
-        - [Field] externalPluginName
-        - [Field] supportsEditorMode
-        - [Field] inListByDefault
+    - [Type] UnityEditorInternal.Profiling.NetworkCounterData
+        - [Field] category
+        - [Field] name
     - [Type] UnityEditorInternal.Profiling.Memory.Experimental.MemorySnapshotFileReader
         - [Method] Dispose
         - [Method] GetFilePath
@@ -1322,14 +1450,16 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] GetDataSingle
         - [Method] GetNumEntries
     - [Type] UnityEditorInternal.Profiling.Memory.Experimental.MemorySnapshotFileWriter
-        - [Method] Open
         - [Method] Close
+        - [Method] Open
         - [Method] WriteEntry
         - [Method] WriteEntryArray
     - [Type] UnityEditorInternal.Profiling.Memory.Experimental.FileFormat.EntryType
     - [Type] UnityEditorInternal.VersionControl.AssetModificationHook
+        - [Method] FileModeChanged
         - [Method] OnWillMoveAsset
         - [Method] OnWillDeleteAsset
+        - [Method] OnWillDeleteAssets
         - [Method] IsOpenForEdit
     - [Type] UnityEditorInternal.VersionControl.ListControl
         - [Method] FromID
@@ -1439,62 +1569,50 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.SerializationMode
     - [Type] UnityEditor.EditorBehaviorMode
     - [Type] UnityEditor.LineEndingsMode
-    - [Type] UnityEditor.ExternalVersionControl
-        - [Field] Disabled
-        - [Field] AutoDetect
-        - [Field] Generic
     - [Type] UnityEditor.EditorSettings
-        - [Property] unityRemoteDevice
-        - [Property] unityRemoteCompression
-        - [Property] unityRemoteResolution
-        - [Property] unityRemoteJoystickSource
-        - [Property] externalVersionControl
         - [Property] serializationMode
         - [Property] lineEndingsForNewScripts
         - [Property] defaultBehaviorMode
-        - [Property] prefabRegularEnvironment
-        - [Property] prefabUIEnvironment
         - [Property] spritePackerMode
-        - [Property] spritePackerPaddingPower
         - [Property] etcTextureCompressorBehavior
         - [Property] etcTextureFastCompressor
         - [Property] etcTextureNormalCompressor
         - [Property] etcTextureBestCompressor
-        - [Property] enableTextureStreamingInEditMode
-        - [Property] enableTextureStreamingInPlayMode
-        - [Property] asyncShaderCompilation
-        - [Property] projectGenerationUserExtensions
         - [Property] projectGenerationBuiltinExtensions
-        - [Property] projectGenerationRootNamespace
-        - [Property] useLegacyProbeSampleCount
-        - [Property] enterPlayModeOptionsEnabled
-        - [Property] enterPlayModeOptions
-        - [Property] assetPipelineMode
-        - [Property] cacheServerMode
-        - [Property] cacheServerEndpoint
-        - [Property] cacheServerNamespacePrefix
-        - [Property] cacheServerEnableDownload
-        - [Property] cacheServerEnableUpload
     - [Type] UnityEditor.PS4HardwareTarget
     - [Type] UnityEditor.XboxOneDeployMethod
     - [Type] UnityEditor.XboxOneDeployDrive
     - [Type] UnityEditor.WSASDK
+    - [Type] UnityEditor.SwitchRomCompressionType
+    - [Type] UnityEditor.EmbeddedLinuxArchitecture
     - [Type] UnityEditor.EditorUserBuildSettings
+        - [Property] selectedEmbeddedLinuxArchitecture
+        - [Property] remoteDeviceInfo
+        - [Property] remoteDeviceAddress
+        - [Property] remoteDeviceUsername
+        - [Property] remoteDeviceExports
+        - [Property] pathOnRemoteDevice
         - [Property] xboxOneAdditionalDebugPorts
         - [Property] androidBuildSystem
         - [Property] androidBuildType
-        - [Property] androidDebugMinification
-        - [Property] androidReleaseMinification
         - [Property] wsaMinUWPSDK
         - [Property] wsaArchitecture
-        - [Property] switchCreateSolutionFile
         - [Property] switchCreateRomFile
+        - [Property] switchEnableRomCompression
+        - [Property] switchSaveADF
+        - [Property] switchRomCompressionType
+        - [Property] switchRomCompressionLevel
+        - [Property] switchRomCompressionConfig
         - [Property] switchNVNGraphicsDebugger
+        - [Property] generateNintendoSwitchShaderInfo
         - [Property] switchNVNShaderDebugging
-        - [Property] switchNVNDrawValidation
+        - [Property] switchNVNDrawValidation_Light
+        - [Property] switchNVNDrawValidation_Heavy
         - [Property] switchEnableHeapInspector
         - [Property] switchEnableDebugPad
         - [Property] switchRedirectWritesToHostMount
+        - [Property] switchHTCSScriptDebugging
+        - [Property] switchUseLegacyNvnPoolAllocator
     - [Type] UnityEditor.EditorUserSettings
         - [Method] GetConfigValue
         - [Method] SetConfigValue
@@ -1503,8 +1621,14 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] showFailedCheckout
         - [Property] overwriteFailedCheckoutAssets
         - [Property] overlayIcons
+        - [Property] hierarchyOverlayIcons
+        - [Property] otherOverlayIcons
         - [Property] allowAsyncStatusUpdate
+        - [Property] artifactGarbageCollection
         - [Property] semanticMergeMode
+        - [Property] desiredImportWorkerCount
+        - [Property] standbyImportWorkerCount
+        - [Property] idleImportWorkerShutdownDelayMilliseconds
     - [Type] UnityEditor.EditorUtility
         - [Method] RevealInFinder
         - [Method] WarnPrefab
@@ -1512,7 +1636,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] OpenWithDefaultApp
         - [Method] LoadWindowLayout
         - [Method] DisplayCustomMenu
-        - [Method] CompileCSharp
         - [Method] DisplayCustomMenuWithSeparators
         - [Property] audioMasterMute
     - [Type] UnityEditor.EditorWindow
@@ -1532,6 +1655,35 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.HandleUtility
         - [Property] nearestControl
         - [Property] handleMaterial
+    - [Type] UnityEditor.InspectorMode
+    - [Type] UnityEditor.HierarchyType
+    - [Type] UnityEditor.IconDrawStyle
+    - [Type] UnityEditor.HierarchyProperty
+        - [Method] SetCustomScenes
+        - [Method] SetSubScenes
+        - [Method] GetScene
+        - [Method] SetSearchFilter
+        - [Method] ClearSceneObjectsFilter
+        - [Method] FilterSingleSceneObject
+        - [Property] instanceID
+        - [Property] pptrValue
+        - [Property] name
+        - [Property] hasChildren
+        - [Property] depth
+        - [Property] ancestors
+        - [Property] row
+        - [Property] colorCode
+        - [Property] guid
+        - [Property] alphaSorted
+        - [Property] showSceneHeaders
+        - [Property] isSceneHeader
+        - [Property] isValid
+        - [Property] isMainRepresentation
+        - [Property] hasFullPreviewImage
+        - [Property] iconDrawStyle
+        - [Property] isFolder
+        - [Property] dynamicDependencies
+        - [Property] icon
     - [Type] UnityEditor.MaterialProperty
         - [Method] ReadFromMaterialPropertyBlock
         - [Method] WriteToMaterialPropertyBlock
@@ -1550,9 +1702,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] SetWsaHolographicRemotingEnabled
         - [Property] productGUID
         - [Property] defaultIsNativeResolution
-        - [Property] openGLRequireES31
-        - [Property] openGLRequireES31AEP
-        - [Property] openGLRequireES32
         - [Property] xboxPIXTextureCapture
         - [Property] xboxEnableAvatar
         - [Property] xboxOneResolution
@@ -1562,6 +1711,47 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.SerializedProperty
         - [Property] isAnimated
         - [Property] objectReferenceInstanceIDValue
+    - [Type] UnityEditor.UnityStats
+        - [Property] batches
+        - [Property] drawCalls
+        - [Property] dynamicBatchedDrawCalls
+        - [Property] staticBatchedDrawCalls
+        - [Property] instancedBatchedDrawCalls
+        - [Property] dynamicBatches
+        - [Property] staticBatches
+        - [Property] instancedBatches
+        - [Property] setPassCalls
+        - [Property] triangles
+        - [Property] vertices
+        - [Property] shadowCasters
+        - [Property] renderTextureChanges
+        - [Property] frameTime
+        - [Property] renderTime
+        - [Property] audioLevel
+        - [Property] audioClippingAmount
+        - [Property] audioDSPLoad
+        - [Property] audioStreamLoad
+        - [Property] renderTextureCount
+        - [Property] renderTextureBytes
+        - [Property] usedTextureMemorySize
+        - [Property] usedTextureCount
+        - [Property] screenRes
+        - [Property] screenBytes
+        - [Property] vboTotal
+        - [Property] vboTotalBytes
+        - [Property] vboUploads
+        - [Property] vboUploadBytes
+        - [Property] ibUploads
+        - [Property] ibUploadBytes
+        - [Property] visibleSkinnedMeshes
+        - [Property] animationComponentsPlaying
+        - [Property] animatorComponentsPlaying
+    - [Type] UnityEditor.ExternalVersionControl
+        - [Field] Disabled
+        - [Field] AutoDetect
+        - [Field] Generic
+    - [Type] UnityEditor.VersionControlSettings
+        - [Property] mode
     - [Type] UnityEditor.AnimationClipSettings
         - [Field] additiveReferencePoseClip
         - [Field] additiveReferencePoseTime
@@ -1597,6 +1787,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.AssetDatabase
         - [Method] GetAllAssetPaths
         - [Method] GetBuiltinExtraResource
+        - [Method] IsAssetImportWorkerProcess
     - [Type] UnityEditor.AssetImporter
         - [Property] assetTimeStamp
     - [Type] UnityEditor.SpeedTreeImporter
@@ -1640,6 +1831,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] IsBackgroundMaterial
         - [Method] SetShaderDefaults
         - [Method] SetShaderNonModifiableDefaults
+    - [Type] UnityEditor.EditorStyles
+        - [Method] FromUSS
+        - [Method] ApplyUSS
     - [Type] UnityEditor.Tools
         - [Property] lockedLayers
     - [Type] UnityEditor.MaterialEditor
@@ -1679,9 +1873,6 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] GetContainingFolder
         - [Method] GetBaseFolders
     - [Type] UnityEditor.SearchableEditorWindow
-    - [Type] UnityEditor.PhysicsDebugWindow
-        - [Method] ShowWindow
-        - [Method] OnEnable
     - [Type] UnityEditor.SceneView
         - [Method] FrameLastActiveSceneViewWithLock
         - [Method] OnDestroy
@@ -1710,107 +1901,24 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] ClosestPtRaySphere
     - [Type] UnityEditor.AudioImporterSampleSettings
         - [Field] conversionMode
-    - [Type] UnityEditor.MonoImporter
-        - [Method] SetDefaultReferences
-        - [Method] GetAllRuntimeMonoScripts
-        - [Method] SetExecutionOrder
-        - [Method] GetExecutionOrder
-        - [Method] GetScript
-        - [Method] GetDefaultReference
     - [Type] UnityEditor.HumanTemplate
         - [Method] Insert
         - [Method] Find
         - [Method] ClearTemplate
-    - [Type] UnityEditor.L10n
-        - [Method] Tr
-        - [Method] TrPath
-    - [Type] UnityEditor.InspectorMode
-    - [Type] UnityEditor.HierarchyType
-    - [Type] UnityEditor.IconDrawStyle
-    - [Type] UnityEditor.HierarchyProperty
-        - [Method] SetCustomScenes
-        - [Method] SetSubScenes
-        - [Method] GetScene
-        - [Method] SetSearchFilter
-        - [Method] ClearSceneObjectsFilter
-        - [Method] FilterSingleSceneObject
-        - [Property] instanceID
-        - [Property] pptrValue
-        - [Property] name
-        - [Property] hasChildren
-        - [Property] depth
-        - [Property] ancestors
-        - [Property] row
-        - [Property] colorCode
-        - [Property] guid
-        - [Property] alphaSorted
-        - [Property] showSceneHeaders
-        - [Property] isValid
-        - [Property] isMainRepresentation
-        - [Property] hasFullPreviewImage
-        - [Property] iconDrawStyle
-        - [Property] isFolder
-        - [Property] dynamicDependencies
-        - [Property] icon
-    - [Type] UnityEditor.UnityStats
-        - [Property] batches
-        - [Property] drawCalls
-        - [Property] dynamicBatchedDrawCalls
-        - [Property] staticBatchedDrawCalls
-        - [Property] instancedBatchedDrawCalls
-        - [Property] dynamicBatches
-        - [Property] staticBatches
-        - [Property] instancedBatches
-        - [Property] setPassCalls
-        - [Property] triangles
-        - [Property] vertices
-        - [Property] shadowCasters
-        - [Property] renderTextureChanges
-        - [Property] frameTime
-        - [Property] renderTime
-        - [Property] audioLevel
-        - [Property] audioClippingAmount
-        - [Property] audioDSPLoad
-        - [Property] audioStreamLoad
-        - [Property] renderTextureCount
-        - [Property] renderTextureBytes
-        - [Property] usedTextureMemorySize
-        - [Property] usedTextureCount
-        - [Property] screenRes
-        - [Property] screenBytes
-        - [Property] vboTotal
-        - [Property] vboTotalBytes
-        - [Property] vboUploads
-        - [Property] vboUploadBytes
-        - [Property] ibUploads
-        - [Property] ibUploadBytes
-        - [Property] visibleSkinnedMeshes
-        - [Property] visibleAnimations
-    - [Type] UnityEditor.Hardware.UsbDevice
-        - [Field] vendorId
-        - [Field] productId
-        - [Field] revision
-        - [Field] udid
-        - [Field] name
-    - [Type] UnityEditor.Hardware.Usb
-        - [Method] OnDevicesChanged
-        - [Event] DevicesChanged
-    - [Type] UnityEditor.Hardware.DevDeviceList
-        - [Method] OnChanged
-        - [Method] FindDevice
-        - [Method] GetDevices
-        - [Event] Changed
-    - [Type] UnityEditor.Hardware.DevDeviceState
-    - [Type] UnityEditor.Hardware.DevDeviceFeatures
-    - [Type] UnityEditor.Hardware.DevDevice
-        - [Property] isConnected
-        - [Property] none
-        - [Field] id
-        - [Field] name
-        - [Field] type
-        - [Field] module
-        - [Field] state
-        - [Field] features
+    - [Type] UnityEditor.PhysicsDebugWindow
+        - [Method] ShowWindow
+        - [Method] OnEnable
+        - [Method] OnDisable
+    - [Type] UnityEditor.XR.BootOptions
+        - [Method] SetXRSDKPreInitLibrary
+    - [Type] UnityEditor.MPE.ChannelInfo
+        - [Field] invalidChannel
+    - [Type] UnityEditor.MPE.ChannelClientInfo
+        - [Field] invalidClient
+    - [Type] UnityEditor.MPE.ProcessService
+        - [Method] ApplyPropertyModifications
+        - [Method] SerializeObject
+        - [Method] DeserializeObject
     - [Type] UnityEditor.VersionControl.Asset
         - [Method] Dispose
         - [Method] IsChildOf
@@ -1824,12 +1932,10 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.VersionControl.Plugin
         - [Method] Dispose
         - [Property] availablePlugins
-        - [Property] name
     - [Type] UnityEditor.VersionControl.Provider
         - [Method] Internal_WarningTask
         - [Method] Internal_ErrorTask
         - [Property] hasChangelistSupport
-        - [Property] hasCheckoutSupport
         - [Property] isVersioningFolders
     - [Type] UnityEditor.VersionControl.Task
         - [Method] Dispose
@@ -1838,13 +1944,46 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.AI.NavMeshBuilder
         - [Property] navMeshSettingsObject
     - [Type] UnityEditor.Audio.AudioMixerEffectPlugin
-    - [Type] UnityEditor.XR.BootOptions
-        - [Method] SetXRSDKPreInitLibrary
-    - [Type] UnityEditor.UIElements.PropertyField
-        - [Property] binding
-        - [Property] bindingPath
+    - [Type] UnityEditor.Hardware.UsbDevice
+        - [Field] vendorId
+        - [Field] productId
+        - [Field] revision
+        - [Field] udid
+        - [Field] name
+    - [Type] UnityEditor.Hardware.Usb
+        - [Method] OnDevicesChanged
+        - [Event] DevicesChanged
+    - [Type] UnityEditor.Hardware.DevDeviceState
+    - [Type] UnityEditor.Hardware.DevDeviceFeatures
+    - [Type] UnityEditor.Hardware.DevDevice
+        - [Property] isConnected
+        - [Property] none
+        - [Field] id
+        - [Field] name
+        - [Field] type
+        - [Field] module
+        - [Field] state
+        - [Field] features
+    - [Type] UnityEditor.Hardware.DevDeviceList
+        - [Method] OnChanged
+        - [Method] FindDevice
+        - [Method] GetDevices
+        - [Event] Changed
+    - [Type] UnityEditor.Build.NamedBuildTarget
+        - [Method] ToBuildTargetGroup
+        - [Method] FromBuildTargetGroup
+    - [Type] UnityEditor.SceneManagement.EditorSceneManager
+        - [Method] IsReloading
+        - [Property] loadedRootSceneCount
     - [Type] UnityEditor.SceneManagement.SceneSetup
         - [Property] isSubScene
+    - [Type] UnityEditor.AssetImporters.FBXMaterialDescriptionPreprocessor
+        - [Method] OnPreprocessMaterialDescription
+    - [Type] UnityEditor.AssetImporters.SketchupMaterialDescriptionPreprocessor
+        - [Method] OnPreprocessMaterialDescription
+    - [Type] UnityEditor.AssetImporters.ThreeDSMaterialDescriptionPreprocessor
+        - [Method] OnPreprocessMaterialDescription
+    - [Type] UnityEditor.Callbacks.OnOpenAssetAttribute
     - [Type] UnityEditor.Experimental.EditorResources
         - [Method] Load
         - [Method] GetAssetPath
@@ -1864,67 +2003,99 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] editorDefaultResourcesPath
         - [Property] libraryBundlePath
         - [Property] dataPath
+    - [Type] UnityEditor.Experimental.AssetDatabaseExperimental
+        - [Method] LookupArtifact
+        - [Method] ProduceArtifact
+        - [Method] ProduceArtifactAsync
+        - [Method] ProduceArtifactsAsync
+        - [Method] ForceProduceArtifact
+        - [Method] GetArtifactPaths
+        - [Method] GetOnDemandArtifactProgress
+        - [Property] counters
+        - [Property] ActiveOnDemandMode
     - [Type] UnityEditor.Experimental.AssetMoveInfo
         - [Property] sourceAssetPath
         - [Property] destinationAssetPath
-    - [Type] UnityEditor.Experimental.AssetDatabaseExperimental
-        - [Method] ClearImporterOverride
-        - [Method] SetImporterOverride
-        - [Method] GetImporterOverride
-        - [Method] GetAvailableImporterTypes
-        - [Method] CanConnectToCacheServer
-        - [Method] RefreshConnectionToCacheServer
-        - [Method] IsConnectedToCacheServer
-        - [Method] ReconnectToCacheServer
-        - [Method] GetCacheServerAddress
-        - [Method] GetCacheServerPort
-        - [Method] RefreshCacheServerNamespacePrefix
-        - [Method] GetArtifactHash
-        - [Method] GetArtifactPaths
-        - [Method] GetArtifactHashes
-        - [Method] GetOnDemandArtifactProgress
-        - [Method] RegisterCustomDependency
-        - [Method] UnregisterCustomDependencyPrefixFilter
-        - [Method] IsAssetImportWorkerProcess
-        - [Property] counters
-        - [Property] ActiveOnDemandMode
     - [Type] UnityEditor.Experimental.OnDemandState
     - [Type] UnityEditor.Experimental.OnDemandProgress
         - [Field] state
         - [Field] progress
+    - [Type] UnityEditor.Animations.AnimatorController
+        - [Method] SetAnimatorController
+        - [Method] AllocateAnimatorClip
+    - [Type] UnityEditor.Animations.AnimatorTransitionBase
+        - [Method] GetDisplayName
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll
     - [Type] UnityEditor.Experimental.GraphView.TypeAdapter
     - [Type] UnityEditor.Experimental.GraphView.NodeAdapter
         - [Method] CanAdapt
         - [Method] Connect
         - [Method] GetAdapter
         - [Method] GetTypeAdapter
-    - [Type] UnityEditor.Experimental.AssetImporters.AssetImportContext
-        - [Method] DependsOnCustomDependency
-    - [Type] UnityEditor.Experimental.AssetImporters.FBXMaterialDescriptionPreprocessor
-        - [Method] OnPreprocessMaterialDescription
-    - [Type] UnityEditor.Experimental.AssetImporters.SketchupMaterialDescriptionPreprocessor
-        - [Method] OnPreprocessMaterialDescription
-    - [Type] UnityEditor.Experimental.AssetImporters.ThreeDSMaterialDescriptionPreprocessor
-        - [Method] OnPreprocessMaterialDescription
-    - [Type] UnityEditor.Animations.AnimatorController
-        - [Method] SetAnimatorController
-        - [Method] AllocateAnimatorClip
-    - [Type] UnityEditor.Animations.AnimatorTransitionBase
-        - [Method] GetDisplayName
-- [Assembly] Editor/Data/Managed/Unity.CompilationPipeline.Common.dll
-    - [Type] Unity.CompilationPipeline.Common.Diagnostics.DiagnosticMessage
-        - [Property] File
-        - [Property] DiagnosticType
-        - [Property] MessageData
-        - [Property] Line
-        - [Property] Column
-    - [Type] Unity.CompilationPipeline.Common.Diagnostics.DiagnosticType
-    - [Type] Unity.CompilationPipeline.Common.ILPostProcessing.InMemoryAssembly
-        - [Property] PeData
-        - [Property] PdbData
-    - [Type] Unity.CompilationPipeline.Common.ILPostProcessing.ILPostProcessResult
-        - [Property] InMemoryAssembly
-        - [Property] Diagnostics
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll
+    - [Type] UnityEditorInternal.PackageManifestImporter
+    - [Type] UnityEditorInternal.PackageManifest
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.QuickSearchModule.dll
+    - [Type] UnityEditor.Search.SearchValue
+        - [Method] ConvertPropertyValue
+    - [Type] UnityEditor.Search.SearchPropositionOptions
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.TextCoreTextEngineModule.dll
+    - [Type] UnityEditor.TextCore.Text.FontAssetCreatorWindow
+        - [Method] ShowFontAtlasCreatorWindow
+        - [Method] OnEnable
+        - [Method] OnDisable
+        - [Method] OnGUI
+        - [Method] Update
+        - [Method] GetKerningTable
+    - [Type] UnityEditor.TextCore.Text.FontAssetEditor
+        - [Method] OnEnable
+        - [Method] OnDisable
+    - [Type] UnityEditor.TextCore.Text.TextColorGradientEditor
+    - [Type] UnityEditor.TextCore.Text.TextCoreShaderGUIBitmap
+    - [Type] UnityEditor.TextCore.Text.TextCoreShaderGUISDF
+    - [Type] UnityEditor.TextCore.Text.TextSettingsEditor
+        - [Method] OnEnable
+    - [Type] UnityEditor.TextCore.Text.TextSpriteAssetEditor
+        - [Method] OnEnable
+    - [Type] UnityEditor.TextCore.Text.TextStylePropertyDrawer
+        - [Field] height
+    - [Type] UnityEditor.TextCore.Text.TextStyleSheetEditor
+- [Assembly] Editor/Data/Managed/Bee.BeeDriver.dll
+    - [Type] Bee.Serialization.ObjectsToDisk
+        - [Method] Add
+        - [Method] Write
+        - [Property] DidWrite
+    - [Type] Bee.Serialization.ObjectsFromDisk
+        - [Method] Get
+        - [Method] TryGet
+    - [Type] Bee.BeeDriver.StdOutMode
+    - [Type] Bee.BeeDriver.SystemProcessRunnableProgram
+    - [Type] Bee.BeeDriver.BeeDriver
+        - [Method] Build
+        - [Method] WaitForResult
+        - [Method] BuildAsync
+        - [Method] Tick
+        - [Method] CancelBuild
+        - [Property] DagJsonFile
+        - [Property] DataForBuildProgram
+        - [Property] DataFromBuildProgram
+    - [Type] Bee.BeeDriver.BeeDriverResult
+        - [Property] NodeResults
+        - [Property] Success
+        - [Property] BeeDriverMessages
+    - [Type] Bee.BeeDriver.BeeBackendLogMessage
+        - [Field] msg
+    - [Type] Bee.BeeDriver.NodeResult
+        - [Field] annotation
+        - [Field] stdout
+        - [Field] outputfile
+        - [Field] outputdirectory
+        - [Field] exitcode
+        - [Field] processed_node_count
+        - [Field] number_of_nodes_ever_queued
+        - [Field] cmdline
+        - [Field] rsps
+        - [Field] profiler_output
 - [Assembly] Editor/Data/Managed/UnityEditor.Graphs.dll
     - [Type] UnityEditor.Graphs.Edge
         - [Property] fromSlot
@@ -2116,6 +2287,212 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] children
         - [Field] motion
         - [Field] weight
+- [Assembly] Editor/Data/Managed/PlayerBuildProgramLibrary.Data.dll
+    - [Type] PlayerBuildProgramLibrary.Data.Plugin
+        - [Field] AssetPath
+        - [Field] DestinationPath
+        - [Field] Architecture
+    - [Type] PlayerBuildProgramLibrary.Data.PluginsData
+        - [Field] Plugins
+    - [Type] PlayerBuildProgramLibrary.Data.PlayerBuildConfig
+        - [Field] DestinationPath
+        - [Field] StagingArea
+        - [Field] DataFolder
+        - [Field] CompanyName
+        - [Field] ProductName
+        - [Field] PlayerPackage
+        - [Field] ApplicationIdentifier
+        - [Field] Architecture
+        - [Field] UseIl2Cpp
+        - [Field] InstallIntoBuildsFolder
+        - [Field] GenerateIdeProject
+        - [Field] Development
+        - [Field] Services
+        - [Field] StreamingAssetsFiles
+    - [Type] PlayerBuildProgramLibrary.Data.BuiltFilesOutput
+        - [Field] Files
+    - [Type] PlayerBuildProgramLibrary.Data.LinkerConfig
+        - [Field] LinkXmlFiles
+        - [Field] AssembliesToProcess
+        - [Field] SearchDirectories
+        - [Field] EditorToLinkerData
+        - [Field] Runtime
+        - [Field] Profile
+        - [Field] Ruleset
+        - [Field] ModulesAssetPath
+        - [Field] AdditionalArgs
+        - [Field] AllowDebugging
+        - [Field] PerformEngineStripping
+    - [Type] PlayerBuildProgramLibrary.Data.Il2CppConfig
+        - [Field] EnableDeepProfilingSupport
+        - [Field] EnableFullGenericSharing
+        - [Field] Profile
+        - [Field] Defines
+        - [Field] ConfigurationName
+        - [Field] GcWBarrierValidation
+        - [Field] GcIncremental
+        - [Field] AdditionalCppFiles
+        - [Field] AdditionalArgs
+        - [Field] ExtraTypes
+        - [Field] CreateSymbolFiles
+        - [Field] AllowDebugging
+    - [Type] PlayerBuildProgramLibrary.Data.Services
+        - [Field] EnableUnityConnect
+        - [Field] EnablePerformanceReporting
+        - [Field] EnableAnalytics
+        - [Field] EnableCrashReporting
+    - [Type] PlayerBuildProgramLibrary.Data.StreamingAssetsFile
+        - [Field] File
+        - [Field] RelativePath
+- [Assembly] Editor/Data/Managed/Unity.CompilationPipeline.Common.dll
+    - [Type] Unity.CompilationPipeline.Common.CodeOptimization
+    - [Type] Unity.CompilationPipeline.Common.AssemblyInfo
+        - [Property] Name
+        - [Property] OutputDirectory
+        - [Property] References
+        - [Property] Defines
+        - [Property] Files
+        - [Property] AllowUnsafeCode
+        - [Property] CodeOptimization
+    - [Type] Unity.CompilationPipeline.Common.Diagnostics.DiagnosticMessage
+        - [Property] File
+        - [Property] DiagnosticType
+        - [Property] MessageData
+        - [Property] Line
+        - [Property] Column
+    - [Type] Unity.CompilationPipeline.Common.Diagnostics.DiagnosticType
+    - [Type] Unity.CompilationPipeline.Common.ILPostProcessing.InMemoryAssembly
+        - [Property] PeData
+        - [Property] PdbData
+    - [Type] Unity.CompilationPipeline.Common.ILPostProcessing.ILPostProcessResult
+        - [Property] InMemoryAssembly
+        - [Property] Diagnostics
+- [Assembly] Editor/Data/Managed/ExCSS.Unity.dll
+    - [Type] ExCSS.Combinator
+    - [Type] ExCSS.RuleType
+    - [Type] ExCSS.UnitType
+    - [Type] ExCSS.DocumentFunction
+    - [Type] ExCSS.DirectionMode
+    - [Type] ExCSS.ParserError
+    - [Type] ExCSS.Comma
+    - [Type] ExCSS.EqualSign
+    - [Type] ExCSS.Whitespace
+    - [Type] System.Tuple
+        - [Method] Create
+    - [Type] ExCSS.StylesheetParseError
+        - [Property] ParserError
+        - [Property] Line
+        - [Property] Column
+        - [Property] Message
+    - [Type] ExCSS.StyleSheet
+        - [Method] RemoveRule
+        - [Method] InsertRule
+        - [Property] Rules
+        - [Property] StyleRules
+        - [Property] CharsetDirectives
+        - [Property] ImportDirectives
+        - [Property] FontFaceDirectives
+        - [Property] KeyframeDirectives
+        - [Property] MediaDirectives
+        - [Property] PageDirectives
+        - [Property] SupportsDirectives
+        - [Property] NamespaceDirectives
+        - [Property] Errors
+    - [Type] ExCSS.MediaTypeList
+        - [Property] Item
+        - [Property] Count
+        - [Property] MediaType
+    - [Type] ExCSS.Parser
+        - [Method] Parse
+    - [Type] ExCSS.DocumentRule
+        - [Property] ConditionText
+    - [Type] ExCSS.CharacterSetRule
+        - [Property] Encoding
+    - [Type] ExCSS.FontFaceRule
+        - [Property] Declarations
+        - [Property] FontFamily
+        - [Property] Src
+        - [Property] FontStyle
+        - [Property] FontWeight
+        - [Property] Stretch
+        - [Property] UnicodeRange
+        - [Property] FontVariant
+        - [Property] FeatureSettings
+    - [Type] ExCSS.GenericRule
+        - [Property] Declarations
+    - [Type] ExCSS.ImportRule
+        - [Property] Href
+        - [Property] Media
+    - [Type] ExCSS.KeyframeRule
+        - [Method] AddValue
+        - [Property] Declarations
+    - [Type] ExCSS.KeyframesRule
+        - [Property] Identifier
+        - [Property] Declarations
+    - [Type] ExCSS.MediaRule
+        - [Property] Media
+    - [Type] ExCSS.NamespaceRule
+        - [Property] Uri
+        - [Property] Prefix
+    - [Type] ExCSS.PageRule
+        - [Property] Selector
+        - [Property] Declarations
+    - [Type] ExCSS.StyleDeclaration
+        - [Property] Value
+        - [Property] ParentRule
+        - [Property] Item
+        - [Property] Properties
+        - [Property] Count
+        - [Property] IsReadOnly
+    - [Type] ExCSS.StyleRule
+        - [Property] Selector
+        - [Property] Value
+        - [Property] Declarations
+        - [Property] Line
+    - [Type] ExCSS.SupportsRule
+        - [Property] IsSupported
+    - [Type] ExCSS.AggregateSelectorList
+        - [Field] Delimiter
+    - [Type] ExCSS.CombinatorSelector
+        - [Property] Character
+        - [Field] Selector
+        - [Field] Delimiter
+    - [Type] ExCSS.ComplexSelector
+        - [Method] AppendSelector
+        - [Property] Length
+    - [Type] ExCSS.MultipleSelectorList
+    - [Type] ExCSS.SimpleSelector
+    - [Type] ExCSS.PrimitiveTerm
+        - [Method] GetFloatValue
+        - [Property] Value
+        - [Property] PrimitiveType
+    - [Type] ExCSS.Property
+        - [Property] Name
+        - [Property] Term
+        - [Property] Important
+        - [Property] Line
+    - [Type] ExCSS.TermList
+        - [Method] AddTerm
+        - [Method] AddSeparator
+        - [Method] GetSeparatorAt
+        - [Method] Item
+        - [Property] Length
+        - [Property] ListItems
+    - [Type] ExCSS.GenericFunction
+        - [Property] Name
+        - [Property] Arguments
+    - [Type] ExCSS.HtmlColor
+        - [Method] FromRgba
+        - [Method] FromRgb
+        - [Method] FromHsl
+        - [Method] FromHex
+        - [Method] TryFromHex
+        - [Property] Alpha
+        - [Field] A
+        - [Field] R
+        - [Field] G
+        - [Field] B
+    - [Type] ExCSS.InheritTerm
 - [Assembly] Editor/Data/Managed/Unity.Cecil.dll
     - [Type] Mono.Cecil.ArrayDimension
         - [Property] LowerBound
@@ -2309,6 +2686,11 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] HasReferenceTypeConstraint
         - [Property] HasNotNullableValueTypeConstraint
         - [Property] HasDefaultConstructorConstraint
+    - [Type] Mono.Cecil.GenericParameterConstraint
+        - [Property] ConstraintType
+        - [Property] HasCustomAttributes
+        - [Property] CustomAttributes
+        - [Property] MetadataToken
     - [Type] Mono.Cecil.GenericParameterAttributes
     - [Type] Mono.Cecil.GenericParameterType
     - [Type] Mono.Cecil.MetadataScopeType
@@ -2394,6 +2776,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] IsSynchronized
         - [Property] NoInlining
         - [Property] NoOptimization
+        - [Property] AggressiveInlining
         - [Property] IsSetter
         - [Property] IsGetter
         - [Property] IsOther
@@ -2461,6 +2844,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] SymbolWriterProvider
         - [Property] WriteSymbols
         - [Property] StrongNameKeyPair
+        - [Property] DeterministicMvid
     - [Type] Mono.Cecil.ModuleDefinition
         - [Method] HasTypeReference
         - [Method] TryGetTypeReference
@@ -2703,6 +3087,7 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Append
         - [Method] Replace
         - [Method] Remove
+        - [Method] RemoveAt
         - [Property] Body
     - [Type] Mono.Cecil.Cil.Instruction
         - [Method] GetSize
@@ -2849,811 +3234,53 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] Mono.Cecil.Cil.DefaultSymbolWriterProvider
     - [Type] Mono.Cecil.Cil.VariableDefinition
         - [Property] IsPinned
-- [Assembly] Editor/Data/Managed/Unity.SerializationLogic.dll
-    - [Type] Unity.SerializationLogic.UnityEngineTypePredicates
-        - [Method] IsMonoBehaviour
-        - [Method] IsScriptableObject
-        - [Method] IsColor32
-        - [Method] IsMatrix4x4
-        - [Method] IsGradient
-        - [Method] IsGUIStyle
-        - [Method] IsRectOffset
-        - [Method] IsSerializableUnityClass
-        - [Method] IsSerializableUnityStruct
-        - [Method] IsUnityEngineObject
-        - [Method] ShouldHaveHadSerializableAttribute
-        - [Method] IsUnityEngineValueType
-        - [Method] IsSerializeFieldAttribute
-        - [Method] IsSerializeReferenceAttribute
-        - [Field] MonoBehaviour
-        - [Field] ScriptableObject
-    - [Type] Unity.SerializationLogic.TypeResolver
-        - [Method] Add
-        - [Method] Remove
-        - [Method] Resolve
-- [Assembly] Editor/Data/Managed/ExCSS.Unity.dll
-    - [Type] ExCSS.Combinator
-    - [Type] ExCSS.RuleType
-    - [Type] ExCSS.UnitType
-    - [Type] ExCSS.DocumentFunction
-    - [Type] ExCSS.DirectionMode
-    - [Type] ExCSS.ParserError
-    - [Type] ExCSS.Comma
-    - [Type] ExCSS.EqualSign
-    - [Type] ExCSS.Whitespace
-    - [Type] System.Tuple
-        - [Method] Create
-    - [Type] ExCSS.StylesheetParseError
-        - [Property] ParserError
-        - [Property] Line
-        - [Property] Column
-        - [Property] Message
-    - [Type] ExCSS.StyleSheet
-        - [Method] RemoveRule
-        - [Method] InsertRule
-        - [Property] Rules
-        - [Property] StyleRules
-        - [Property] CharsetDirectives
-        - [Property] ImportDirectives
-        - [Property] FontFaceDirectives
-        - [Property] KeyframeDirectives
-        - [Property] MediaDirectives
-        - [Property] PageDirectives
-        - [Property] SupportsDirectives
-        - [Property] NamespaceDirectives
-        - [Property] Errors
-    - [Type] ExCSS.MediaTypeList
-        - [Property] Item
-        - [Property] Count
-        - [Property] MediaType
-    - [Type] ExCSS.Parser
-        - [Method] Parse
-    - [Type] ExCSS.DocumentRule
-        - [Property] ConditionText
-    - [Type] ExCSS.CharacterSetRule
-        - [Property] Encoding
-    - [Type] ExCSS.FontFaceRule
-        - [Property] Declarations
-        - [Property] FontFamily
-        - [Property] Src
-        - [Property] FontStyle
-        - [Property] FontWeight
-        - [Property] Stretch
-        - [Property] UnicodeRange
-        - [Property] FontVariant
-        - [Property] FeatureSettings
-    - [Type] ExCSS.GenericRule
-        - [Property] Declarations
-    - [Type] ExCSS.ImportRule
-        - [Property] Href
-        - [Property] Media
-    - [Type] ExCSS.KeyframeRule
-        - [Method] AddValue
-        - [Property] Declarations
-    - [Type] ExCSS.KeyframesRule
-        - [Property] Identifier
-        - [Property] Declarations
-    - [Type] ExCSS.MediaRule
-        - [Property] Media
-    - [Type] ExCSS.NamespaceRule
-        - [Property] Uri
-        - [Property] Prefix
-    - [Type] ExCSS.PageRule
-        - [Property] Selector
-        - [Property] Declarations
-    - [Type] ExCSS.StyleDeclaration
-        - [Property] Value
-        - [Property] ParentRule
-        - [Property] Item
-        - [Property] Properties
-        - [Property] Count
-        - [Property] IsReadOnly
-    - [Type] ExCSS.StyleRule
-        - [Property] Selector
-        - [Property] Value
-        - [Property] Declarations
-        - [Property] Line
-    - [Type] ExCSS.SupportsRule
-        - [Property] IsSupported
-    - [Type] ExCSS.AggregateSelectorList
-        - [Field] Delimiter
-    - [Type] ExCSS.CombinatorSelector
-        - [Property] Character
-        - [Field] Selector
-        - [Field] Delimiter
-    - [Type] ExCSS.ComplexSelector
-        - [Method] AppendSelector
-        - [Property] Length
-    - [Type] ExCSS.MultipleSelectorList
-    - [Type] ExCSS.SimpleSelector
-    - [Type] ExCSS.PrimitiveTerm
-        - [Method] GetFloatValue
-        - [Property] Value
-        - [Property] PrimitiveType
-    - [Type] ExCSS.Property
-        - [Property] Name
-        - [Property] Term
-        - [Property] Important
-        - [Property] Line
-    - [Type] ExCSS.TermList
-        - [Method] AddTerm
-        - [Method] AddSeparator
-        - [Method] Item
-        - [Property] Length
-        - [Property] ListItems
-    - [Type] ExCSS.GenericFunction
-        - [Property] Name
-        - [Property] Arguments
-    - [Type] ExCSS.HtmlColor
-        - [Method] FromRgba
-        - [Method] FromRgb
-        - [Method] FromHsl
-        - [Method] FromHex
-        - [Method] TryFromHex
-        - [Property] Alpha
-        - [Field] A
-        - [Field] R
-        - [Field] G
-        - [Field] B
-    - [Type] ExCSS.InheritTerm
-- [Assembly] Editor/Data/Managed/Unity.Legacy.NRefactory.dll
-    - [Type] ICSharpCode.NRefactory.Parser.CSharp.ConditionalCompilation
-        - [Method] Define
-        - [Method] Undefine
-        - [Method] Evaluate
-        - [Property] Symbols
-    - [Type] ICSharpCode.NRefactory.BlankLine
-    - [Type] ICSharpCode.NRefactory.Comment
-        - [Property] CommentType
-        - [Property] CommentText
-        - [Property] CommentStartsLine
-    - [Type] ICSharpCode.NRefactory.CommentType
-    - [Type] ICSharpCode.NRefactory.PreprocessingDirective
-        - [Method] VBToCSharp
-        - [Method] CSharpToVB
-        - [Property] Cmd
-        - [Property] Arg
-        - [Property] Expression
-        - [Property] LastLineEnd
-    - [Type] ICSharpCode.NRefactory.Parser.SpecialTracker
-        - [Method] InformToken
-        - [Method] RetrieveSpecials
-        - [Method] AddEndOfLine
-        - [Method] AddPreprocessingDirective
-        - [Method] StartComment
-        - [Method] AddChar
-        - [Method] AddString
-        - [Method] FinishComment
-        - [Property] CurrentSpecials
-    - [Type] ICSharpCode.NRefactory.Parser.TagComment
-        - [Property] Tag
-    - [Type] ICSharpCode.NRefactory.Parser.LiteralFormat
-    - [Type] ICSharpCode.NRefactory.Parser.Token
-        - [Property] Kind
-        - [Property] LiteralFormat
-        - [Property] LiteralValue
-        - [Property] Value
-        - [Property] EndLocation
-        - [Property] Location
-    - [Type] ICSharpCode.NRefactory.Parser.Errors
-        - [Property] ErrorOutput
-        - [Property] Count
-        - [Field] SynErr
-        - [Field] SemErr
-        - [Field] Error
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.CSharpOutputVisitor
-        - [Method] Reset
-        - [Method] AppendCommaSeparatedList
-        - [Property] Text
-        - [Property] Errors
-        - [Property] Options
-        - [Property] OutputFormatter
-        - [Event] BeforeNodeVisit
-        - [Event] AfterNodeVisit
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.CSharpOutputFormatter
-        - [Method] BeginBrace
-        - [Method] EndBrace
-        - [Property] EmitSemicolon
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.BraceStyle
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.BraceForcement
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.AbstractPrettyPrintOptions
-        - [Property] IndentationChar
-        - [Property] TabSize
-        - [Property] IndentSize
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.PrettyPrintOptions
-        - [Property] StatementBraceStyle
-        - [Property] NamespaceBraceStyle
-        - [Property] ClassBraceStyle
-        - [Property] InterfaceBraceStyle
-        - [Property] StructBraceStyle
-        - [Property] EnumBraceStyle
-        - [Property] ConstructorBraceStyle
-        - [Property] DestructorBraceStyle
-        - [Property] MethodBraceStyle
-        - [Property] AnonymousMethodBraceStyle
-        - [Property] PropertyBraceStyle
-        - [Property] PropertyGetBraceStyle
-        - [Property] AllowPropertyGetBlockInline
-        - [Property] PropertySetBraceStyle
-        - [Property] AllowPropertySetBlockInline
-        - [Property] EventBraceStyle
-        - [Property] EventAddBraceStyle
-        - [Property] AllowEventAddBlockInline
-        - [Property] EventRemoveBraceStyle
-        - [Property] AllowEventRemoveBlockInline
-        - [Property] IfElseBraceForcement
-        - [Property] ForBraceForcement
-        - [Property] ForEachBraceForcement
-        - [Property] WhileBraceForcement
-        - [Property] UsingBraceForcement
-        - [Property] FixedBraceForcement
-        - [Property] IndentBlocks
-        - [Property] IndentClassBody
-        - [Property] IndentStructBody
-        - [Property] IndentPropertyBody
-        - [Property] IndentNamespaceBody
-        - [Property] IndentMethodBody
-        - [Property] IndentInterfaceBody
-        - [Property] IndentEventBody
-        - [Property] IndentEnumBody
-        - [Property] IndentBreakStatements
-        - [Property] IndentSwitchBody
-        - [Property] IndentCaseBody
-        - [Property] PlaceCatchOnNewLine
-        - [Property] PlaceFinallyOnNewLine
-        - [Property] PlaceElseOnNewLine
-        - [Property] PlaceNonBlockElseOnNewLine
-        - [Property] PlaceWhileOnNewLine
-        - [Property] CheckedParentheses
-        - [Property] NewParentheses
-        - [Property] SizeOfParentheses
-        - [Property] TypeOfParentheses
-        - [Property] UncheckedParentheses
-        - [Property] BeforeConstructorDeclarationParentheses
-        - [Property] BeforeDelegateDeclarationParentheses
-        - [Property] BeforeMethodCallParentheses
-        - [Property] BeforeMethodDeclarationParentheses
-        - [Property] IfParentheses
-        - [Property] WhileParentheses
-        - [Property] ForeachParentheses
-        - [Property] LockParentheses
-        - [Property] UsingParentheses
-        - [Property] CatchParentheses
-        - [Property] FixedParentheses
-        - [Property] SwitchParentheses
-        - [Property] ForParentheses
-        - [Property] AroundAdditiveOperatorParentheses
-        - [Property] AroundAssignmentParentheses
-        - [Property] AroundBitwiseOperatorParentheses
-        - [Property] AroundEqualityOperatorParentheses
-        - [Property] AroundLogicalOperatorParentheses
-        - [Property] AroundMultiplicativeOperatorParentheses
-        - [Property] AroundRelationalOperatorParentheses
-        - [Property] AroundShiftOperatorParentheses
-        - [Property] WithinCheckedExpressionParantheses
-        - [Property] WithinTypeOfParentheses
-        - [Property] WithinSizeOfParentheses
-        - [Property] WithinCastParentheses
-        - [Property] WithinUsingParentheses
-        - [Property] WithinLockParentheses
-        - [Property] WithinSwitchParentheses
-        - [Property] WithinCatchParentheses
-        - [Property] WithinForEachParentheses
-        - [Property] WithinForParentheses
-        - [Property] WithinWhileParentheses
-        - [Property] WithinIfParentheses
-        - [Property] WithinMethodDeclarationParentheses
-        - [Property] WithinMethodCallParentheses
-        - [Property] WithinParentheses
-        - [Property] ConditionalOperatorAfterConditionSpace
-        - [Property] ConditionalOperatorAfterSeparatorSpace
-        - [Property] ConditionalOperatorBeforeConditionSpace
-        - [Property] ConditionalOperatorBeforeSeparatorSpace
-        - [Property] SpacesAfterComma
-        - [Property] SpacesAfterSemicolon
-        - [Property] SpacesAfterTypecast
-        - [Property] SpacesBeforeComma
-        - [Property] SpacesWithinBrackets
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.VBNetOutputFormatter
-        - [Method] PrintLineContinuation
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.VBNetOutputVisitor
-        - [Method] AppendCommaSeparatedList
-        - [Property] Text
-        - [Property] Errors
-        - [Property] Options
-        - [Property] OutputFormatter
-        - [Event] BeforeNodeVisit
-        - [Event] AfterNodeVisit
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.VBNetPrettyPrintOptions
-        - [Property] OutputByValModifier
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.SpecialOutputVisitor
-        - [Field] ForceWriteInPreviousLine
-    - [Type] ICSharpCode.NRefactory.PrettyPrinter.SpecialNodesInserter
-        - [Method] AcceptNodeStart
-        - [Method] AcceptNodeEnd
-        - [Method] AcceptPoint
-        - [Method] Finish
-        - [Method] Install
-    - [Type] ICSharpCode.NRefactory.SnippetType
-    - [Type] ICSharpCode.NRefactory.SnippetParser
-        - [Method] Parse
-        - [Property] Errors
-        - [Property] Specials
-        - [Property] SnippetType
-    - [Type] ICSharpCode.NRefactory.Visitors.CodeDomVisitor
-        - [Property] EnvironmentInformationProvider
-        - [Field] codeCompileUnit
-    - [Type] ICSharpCode.NRefactory.Visitors.CodeDomVerboseOutputGenerator
-        - [Method] PublicGenerateCodeFromStatement
-    - [Type] ICSharpCode.NRefactory.Visitors.ConvertVisitorBase
-    - [Type] ICSharpCode.NRefactory.Visitors.CSharpConstructsConvertVisitor
-    - [Type] ICSharpCode.NRefactory.Visitors.LocalLookupVariable
+- [Assembly] Editor/Data/Managed/ScriptCompilationBuildProgram.Data.dll
+    - [Type] ScriptCompilationBuildProgram.Data.ScriptCompilationData
+        - [Field] Assemblies
+        - [Field] CodegenAssemblies
+        - [Field] DotnetRuntimePath
+        - [Field] DotnetRoslynPath
+        - [Field] MovedFromExtractorPath
+        - [Field] OutputDirectory
+        - [Field] Debug
+        - [Field] BuildTarget
+        - [Field] Localization
+    - [Type] ScriptCompilationBuildProgram.Data.AssemblyData
         - [Field] Name
-        - [Field] TypeRef
-        - [Field] StartPos
-        - [Field] EndPos
-        - [Field] IsConst
-        - [Field] IsLoopVariable
-        - [Field] Initializer
-        - [Field] ParentLambdaExpression
-        - [Field] IsQueryContinuation
-    - [Type] ICSharpCode.NRefactory.Visitors.LookupTableVisitor
-        - [Method] AddVariable
-        - [Property] Variables
-        - [Property] WithStatements
-    - [Type] ICSharpCode.NRefactory.Visitors.NotImplementedAstVisitor
-    - [Type] ICSharpCode.NRefactory.Visitors.PrefixFieldsVisitor
-        - [Method] Run
-    - [Type] ICSharpCode.NRefactory.Visitors.SetParentVisitor
-    - [Type] ICSharpCode.NRefactory.Visitors.ToCSharpConvertVisitor
-    - [Type] ICSharpCode.NRefactory.Visitors.ToVBNetConvertVisitor
-    - [Type] ICSharpCode.NRefactory.Visitors.VBNetConstructsConvertVisitor
-        - [Field] FunctionReturnValueName
-        - [Field] AddDefaultValueInitializerToLocalVariableDeclarations
-        - [Field] VBAssemblyName
-    - [Type] ICSharpCode.NRefactory.SupportedLanguage
-    - [Type] ICSharpCode.NRefactory.Location
-        - [Property] X
-        - [Property] Y
-        - [Property] Line
-        - [Property] Column
-        - [Property] IsEmpty
-        - [Field] Empty
-    - [Type] ICSharpCode.NRefactory.Ast.BlockStatement
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.CompilationUnit
-        - [Method] BlockStart
-        - [Method] BlockEnd
-        - [Property] CurrentBock
-    - [Type] ICSharpCode.NRefactory.Ast.LocalVariableDeclaration
-        - [Method] GetTypeForVariable
-        - [Method] GetVariableDeclaration
-        - [Property] TypeReference
-        - [Property] Modifier
-        - [Property] Variables
-    - [Type] ICSharpCode.NRefactory.Ast.PrimitiveExpression
-        - [Property] LiteralFormat
-        - [Property] Value
-        - [Property] StringValue
-    - [Type] ICSharpCode.NRefactory.Ast.Modifiers
-    - [Type] ICSharpCode.NRefactory.Ast.ClassType
-    - [Type] ICSharpCode.NRefactory.Ast.ParentType
-    - [Type] ICSharpCode.NRefactory.Ast.FieldDirection
-    - [Type] ICSharpCode.NRefactory.Ast.ParameterModifiers
-    - [Type] ICSharpCode.NRefactory.Ast.AssignmentOperatorType
-    - [Type] ICSharpCode.NRefactory.Ast.BinaryOperatorType
-    - [Type] ICSharpCode.NRefactory.Ast.CastType
-    - [Type] ICSharpCode.NRefactory.Ast.UnaryOperatorType
-    - [Type] ICSharpCode.NRefactory.Ast.ContinueType
-    - [Type] ICSharpCode.NRefactory.Ast.ConditionType
-    - [Type] ICSharpCode.NRefactory.Ast.ConditionPosition
-    - [Type] ICSharpCode.NRefactory.Ast.ExitType
-    - [Type] ICSharpCode.NRefactory.Ast.ConstructorInitializerType
-    - [Type] ICSharpCode.NRefactory.Ast.ConversionType
-    - [Type] ICSharpCode.NRefactory.Ast.OverloadableOperatorType
-    - [Type] ICSharpCode.NRefactory.Ast.CharsetModifier
-    - [Type] ICSharpCode.NRefactory.Ast.OptionType
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionOrderingDirection
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionPartitionType
-    - [Type] ICSharpCode.NRefactory.Ast.AddHandlerStatement
-        - [Property] EventExpression
-        - [Property] HandlerExpression
-    - [Type] ICSharpCode.NRefactory.Ast.AddressOfExpression
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.AnonymousMethodExpression
-        - [Property] Parameters
-        - [Property] Body
-        - [Property] HasParameterList
-    - [Type] ICSharpCode.NRefactory.Ast.ArrayCreateExpression
-        - [Property] CreateType
-        - [Property] Arguments
-        - [Property] ArrayInitializer
-        - [Property] IsImplicitlyTyped
-    - [Type] ICSharpCode.NRefactory.Ast.AssignmentExpression
-        - [Property] Left
-        - [Property] Op
-        - [Property] Right
-    - [Type] ICSharpCode.NRefactory.Ast.Attribute
-        - [Property] Name
-        - [Property] PositionalArguments
-        - [Property] NamedArguments
-    - [Type] ICSharpCode.NRefactory.Ast.AttributeSection
-        - [Property] AttributeTarget
-        - [Property] Attributes
-    - [Type] ICSharpCode.NRefactory.Ast.BaseReferenceExpression
-    - [Type] ICSharpCode.NRefactory.Ast.BinaryOperatorExpression
-        - [Property] Left
-        - [Property] Op
-        - [Property] Right
-    - [Type] ICSharpCode.NRefactory.Ast.BreakStatement
-    - [Type] ICSharpCode.NRefactory.Ast.CaseLabel
-        - [Property] Label
-        - [Property] BinaryOperatorType
-        - [Property] ToExpression
-        - [Property] IsDefault
-    - [Type] ICSharpCode.NRefactory.Ast.CastExpression
-        - [Property] CastTo
-        - [Property] Expression
-        - [Property] CastType
-    - [Type] ICSharpCode.NRefactory.Ast.CatchClause
-        - [Property] TypeReference
-        - [Property] VariableName
-        - [Property] StatementBlock
-        - [Property] Condition
-    - [Type] ICSharpCode.NRefactory.Ast.CheckedExpression
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.CheckedStatement
-        - [Property] Block
-    - [Type] ICSharpCode.NRefactory.Ast.ClassReferenceExpression
-    - [Type] ICSharpCode.NRefactory.Ast.CollectionInitializerExpression
-        - [Property] CreateExpressions
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.ConditionalExpression
-        - [Property] Condition
-        - [Property] TrueExpression
-        - [Property] FalseExpression
-    - [Type] ICSharpCode.NRefactory.Ast.ConstructorDeclaration
-        - [Property] ConstructorInitializer
-        - [Property] Body
-    - [Type] ICSharpCode.NRefactory.Ast.ConstructorInitializer
-        - [Property] ConstructorInitializerType
-        - [Property] Arguments
-        - [Property] IsNull
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.ContinueStatement
-        - [Property] ContinueType
-    - [Type] ICSharpCode.NRefactory.Ast.DeclareDeclaration
-        - [Property] Alias
-        - [Property] Library
-        - [Property] Charset
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.DefaultValueExpression
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.DelegateDeclaration
-        - [Property] Name
-        - [Property] ReturnType
-        - [Property] Parameters
-        - [Property] Templates
-    - [Type] ICSharpCode.NRefactory.Ast.DestructorDeclaration
-        - [Property] Name
-        - [Property] Body
-    - [Type] ICSharpCode.NRefactory.Ast.DirectionExpression
-        - [Property] FieldDirection
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.DoLoopStatement
-        - [Property] Condition
-        - [Property] ConditionType
-        - [Property] ConditionPosition
-    - [Type] ICSharpCode.NRefactory.Ast.ElseIfSection
-        - [Property] Condition
-    - [Type] ICSharpCode.NRefactory.Ast.EmptyStatement
-    - [Type] ICSharpCode.NRefactory.Ast.EndStatement
-    - [Type] ICSharpCode.NRefactory.Ast.EraseStatement
-        - [Property] Expressions
-    - [Type] ICSharpCode.NRefactory.Ast.ErrorStatement
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.EventAddRegion
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.EventDeclaration
-        - [Property] AddRegion
-        - [Property] RemoveRegion
-        - [Property] RaiseRegion
-        - [Property] BodyStart
-        - [Property] BodyEnd
-        - [Property] Initializer
-        - [Property] HasRemoveRegion
-        - [Property] HasRaiseRegion
-        - [Property] HasAddRegion
-    - [Type] ICSharpCode.NRefactory.Ast.EventRaiseRegion
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.EventRemoveRegion
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.ExitStatement
-        - [Property] ExitType
-    - [Type] ICSharpCode.NRefactory.Ast.ExpressionRangeVariable
-        - [Property] Identifier
-        - [Property] Expression
-        - [Property] Type
-        - [Property] IsNull
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.ExpressionStatement
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.ExternAliasDirective
-        - [Property] Name
-    - [Type] ICSharpCode.NRefactory.Ast.FieldDeclaration
-        - [Method] GetVariableDeclaration
-        - [Method] GetTypeForField
-        - [Property] TypeReference
-        - [Property] Fields
-    - [Type] ICSharpCode.NRefactory.Ast.FixedStatement
-        - [Property] PointerDeclaration
-    - [Type] ICSharpCode.NRefactory.Ast.ForeachStatement
-        - [Property] TypeReference
-        - [Property] VariableName
-        - [Property] Expression
-        - [Property] NextExpression
-    - [Type] ICSharpCode.NRefactory.Ast.ForNextStatement
-        - [Property] Start
-        - [Property] End
-        - [Property] Step
-        - [Property] NextExpressions
-        - [Property] TypeReference
-        - [Property] VariableName
-        - [Property] LoopVariableExpression
-    - [Type] ICSharpCode.NRefactory.Ast.ForStatement
-        - [Property] Initializers
-        - [Property] Condition
-        - [Property] Iterator
-    - [Type] ICSharpCode.NRefactory.Ast.GotoCaseStatement
-        - [Property] Expression
-        - [Property] IsDefaultCase
-    - [Type] ICSharpCode.NRefactory.Ast.GotoStatement
-        - [Property] Label
-    - [Type] ICSharpCode.NRefactory.Ast.IdentifierExpression
-        - [Property] Identifier
-        - [Property] TypeArguments
-    - [Type] ICSharpCode.NRefactory.Ast.IfElseStatement
-        - [Property] Condition
-        - [Property] TrueStatement
-        - [Property] FalseStatement
-        - [Property] ElseIfSections
-        - [Property] HasElseStatements
-        - [Property] HasElseIfSections
-    - [Type] ICSharpCode.NRefactory.Ast.IndexerDeclaration
-        - [Property] Parameters
-        - [Property] InterfaceImplementations
-        - [Property] TypeReference
-        - [Property] BodyStart
-        - [Property] BodyEnd
-        - [Property] GetRegion
-        - [Property] SetRegion
-        - [Property] IsReadOnly
-        - [Property] HasSetRegion
-        - [Property] HasGetRegion
-        - [Property] IsWriteOnly
-    - [Type] ICSharpCode.NRefactory.Ast.IndexerExpression
-        - [Property] TargetObject
-        - [Property] Indexes
-    - [Type] ICSharpCode.NRefactory.Ast.InterfaceImplementation
-        - [Property] InterfaceType
-        - [Property] MemberName
-    - [Type] ICSharpCode.NRefactory.Ast.InvocationExpression
-        - [Property] TargetObject
-        - [Property] Arguments
-    - [Type] ICSharpCode.NRefactory.Ast.LabelStatement
-        - [Property] Label
-    - [Type] ICSharpCode.NRefactory.Ast.LambdaExpression
-        - [Property] Parameters
-        - [Property] StatementBody
-        - [Property] ExpressionBody
-        - [Property] ExtendedEndLocation
-    - [Type] ICSharpCode.NRefactory.Ast.LockStatement
-        - [Property] LockExpression
-    - [Type] ICSharpCode.NRefactory.Ast.MemberReferenceExpression
-        - [Property] TargetObject
-        - [Property] MemberName
-        - [Property] TypeArguments
-    - [Type] ICSharpCode.NRefactory.Ast.MethodDeclaration
-        - [Property] Body
-        - [Property] HandlesClause
-        - [Property] Templates
-        - [Property] IsExtensionMethod
-    - [Type] ICSharpCode.NRefactory.Ast.NamedArgumentExpression
-        - [Property] Name
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.NamespaceDeclaration
-        - [Property] Name
-    - [Type] ICSharpCode.NRefactory.Ast.ObjectCreateExpression
-        - [Property] CreateType
-        - [Property] Parameters
-        - [Property] ObjectInitializer
-        - [Property] IsAnonymousType
-    - [Type] ICSharpCode.NRefactory.Ast.OnErrorStatement
-    - [Type] ICSharpCode.NRefactory.Ast.OperatorDeclaration
-        - [Property] ConversionType
-        - [Property] ReturnTypeAttributes
-        - [Property] OverloadableOperator
-        - [Property] IsConversionOperator
-    - [Type] ICSharpCode.NRefactory.Ast.OptionDeclaration
-        - [Property] OptionType
-        - [Property] OptionValue
-    - [Type] ICSharpCode.NRefactory.Ast.ParameterDeclarationExpression
-        - [Property] Attributes
-        - [Property] ParameterName
-        - [Property] TypeReference
-        - [Property] ParamModifier
-        - [Property] DefaultValue
-    - [Type] ICSharpCode.NRefactory.Ast.ParenthesizedExpression
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.PointerReferenceExpression
-        - [Property] TargetObject
-        - [Property] MemberName
-        - [Property] TypeArguments
-    - [Type] ICSharpCode.NRefactory.Ast.PropertyDeclaration
-        - [Property] BodyStart
-        - [Property] BodyEnd
-        - [Property] GetRegion
-        - [Property] SetRegion
-        - [Property] HasGetRegion
-        - [Property] HasSetRegion
-        - [Property] IsReadOnly
-        - [Property] IsWriteOnly
-    - [Type] ICSharpCode.NRefactory.Ast.PropertyGetRegion
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.PropertySetRegion
-        - [Property] Parameters
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpression
-        - [Property] FromClause
-        - [Property] IsQueryContinuation
-        - [Property] MiddleClauses
-        - [Property] SelectOrGroupClause
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionAggregateClause
-        - [Property] FromClause
-        - [Property] MiddleClauses
-        - [Property] IntoVariables
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionDistinctClause
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionFromClause
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionGroupClause
-        - [Property] Projection
-        - [Property] GroupBy
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionGroupJoinVBClause
-        - [Property] JoinClause
-        - [Property] IntoVariables
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionGroupVBClause
-        - [Property] GroupVariables
-        - [Property] ByVariables
-        - [Property] IntoVariables
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionJoinClause
-        - [Property] OnExpression
-        - [Property] IntoIdentifier
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionJoinConditionVB
-        - [Property] LeftSide
-        - [Property] RightSide
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionJoinVBClause
-        - [Property] JoinVariable
-        - [Property] SubJoin
-        - [Property] Conditions
-        - [Property] Null
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionLetClause
-        - [Property] Identifier
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionLetVBClause
-        - [Property] Variables
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionOrderClause
-        - [Property] Orderings
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionOrdering
-        - [Property] Criteria
-        - [Property] Direction
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionPartitionVBClause
-        - [Property] Expression
-        - [Property] PartitionType
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionSelectClause
-        - [Property] Projection
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionSelectVBClause
-        - [Property] Variables
-    - [Type] ICSharpCode.NRefactory.Ast.QueryExpressionWhereClause
-        - [Property] Condition
-    - [Type] ICSharpCode.NRefactory.Ast.RaiseEventStatement
-        - [Property] EventName
-        - [Property] Arguments
-    - [Type] ICSharpCode.NRefactory.Ast.ReDimStatement
-        - [Property] ReDimClauses
-        - [Property] IsPreserve
-    - [Type] ICSharpCode.NRefactory.Ast.RemoveHandlerStatement
-        - [Property] EventExpression
-        - [Property] HandlerExpression
-    - [Type] ICSharpCode.NRefactory.Ast.ResumeStatement
-        - [Property] LabelName
-        - [Property] IsResumeNext
-    - [Type] ICSharpCode.NRefactory.Ast.ReturnStatement
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.SizeOfExpression
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.StackAllocExpression
-        - [Property] TypeReference
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.StopStatement
-    - [Type] ICSharpCode.NRefactory.Ast.SwitchSection
-        - [Property] SwitchLabels
-    - [Type] ICSharpCode.NRefactory.Ast.SwitchStatement
-        - [Property] SwitchExpression
-        - [Property] SwitchSections
-    - [Type] ICSharpCode.NRefactory.Ast.TemplateDefinition
-        - [Property] Name
-        - [Property] Bases
-    - [Type] ICSharpCode.NRefactory.Ast.ThisReferenceExpression
-    - [Type] ICSharpCode.NRefactory.Ast.ThrowStatement
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.TryCatchStatement
-        - [Property] StatementBlock
-        - [Property] CatchClauses
-        - [Property] FinallyBlock
-    - [Type] ICSharpCode.NRefactory.Ast.TypeDeclaration
-        - [Property] Name
-        - [Property] Type
-        - [Property] BaseTypes
-        - [Property] Templates
-        - [Property] BodyStartLocation
-    - [Type] ICSharpCode.NRefactory.Ast.TypeOfExpression
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.TypeOfIsExpression
-        - [Property] Expression
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.TypeReferenceExpression
-        - [Property] TypeReference
-    - [Type] ICSharpCode.NRefactory.Ast.UnaryOperatorExpression
-        - [Property] Op
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.UncheckedExpression
-        - [Property] Expression
-    - [Type] ICSharpCode.NRefactory.Ast.UncheckedStatement
-        - [Property] Block
-    - [Type] ICSharpCode.NRefactory.Ast.UnsafeStatement
-        - [Property] Block
-    - [Type] ICSharpCode.NRefactory.Ast.Using
-        - [Property] Name
-        - [Property] Alias
-        - [Property] IsAlias
-    - [Type] ICSharpCode.NRefactory.Ast.UsingDeclaration
-        - [Property] Usings
-    - [Type] ICSharpCode.NRefactory.Ast.UsingStatement
-        - [Property] ResourceAcquisition
-    - [Type] ICSharpCode.NRefactory.Ast.VariableDeclaration
-        - [Property] Name
-        - [Property] Initializer
-        - [Property] TypeReference
-        - [Property] FixedArrayInitialization
-    - [Type] ICSharpCode.NRefactory.Ast.WithStatement
-        - [Property] Expression
-        - [Property] Body
-    - [Type] ICSharpCode.NRefactory.Ast.YieldStatement
-        - [Property] Statement
-        - [Property] IsYieldBreak
-        - [Property] IsYieldReturn
-    - [Type] ICSharpCode.NRefactory.Ast.TypeReference
-        - [Method] StripLastIdentifierFromType
-        - [Method] CheckNull
-        - [Method] AreEqualReferences
-        - [Property] PrimitiveTypesCSharp
-        - [Property] PrimitiveTypesVB
-        - [Property] PrimitiveTypesCSharpReverse
-        - [Property] PrimitiveTypesVBReverse
-        - [Property] Type
-        - [Property] PointerNestingLevel
-        - [Property] RankSpecifier
-        - [Property] GenericTypes
-        - [Property] IsArrayType
-        - [Property] Null
-        - [Property] IsNull
-        - [Property] IsGlobal
-        - [Property] IsKeyword
-        - [Field] StructConstraint
-        - [Field] ClassConstraint
-        - [Field] NewConstraint
-    - [Type] ICSharpCode.NRefactory.Ast.InnerClassTypeReference
-        - [Method] CombineToNormalTypeReference
-        - [Property] BaseType
+        - [Field] SourceFiles
+        - [Field] Defines
+        - [Field] PrebuiltReferences
+        - [Field] References
+        - [Field] AllowUnsafeCode
+        - [Field] RuleSet
+        - [Field] LanguageVersion
+        - [Field] UseDeterministicCompilation
+        - [Field] Analyzers
+        - [Field] Asmdef
+        - [Field] BclDirectories
+        - [Field] CustomCompilerOptions
+        - [Field] DebugIndex
+        - [Field] SkipCodeGen
+    - [Type] ScriptCompilationBuildProgram.Data.ScriptCompilationData_Out
+        - [Field] Assemblies
+    - [Type] ScriptCompilationBuildProgram.Data.AssemblyData_Out
+        - [Field] Path
+        - [Field] ScriptUpdaterRsp
+        - [Field] MovedFromExtractorFile
+- [Assembly] Editor/Data/Managed/BeeBuildProgramCommon.Data.dll
+    - [Type] BeeBuildProgramCommon.Data.PackageInfo
+        - [Field] Name
+        - [Field] ResolvedPath
+        - [Field] Immutable
+    - [Type] BeeBuildProgramCommon.Data.ConfigurationData
+        - [Field] Il2CppDir
+        - [Field] UnityLinkerPath
+        - [Field] Il2CppPath
+        - [Field] NetCoreRunPath
+        - [Field] EditorContentsPath
+        - [Field] Packages
+        - [Field] UnityVersion
+        - [Field] UnitySourceCodePath
+        - [Field] AdvancedLicense
+        - [Field] EmitDataForBeeWhy
 
