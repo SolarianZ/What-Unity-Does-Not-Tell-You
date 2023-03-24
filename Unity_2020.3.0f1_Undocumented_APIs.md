@@ -40,6 +40,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] isLooping
         - [Property] legacy
         - [Property] isHumanMotion
+    - [Type] UnityEngine.Animations.AnimationPlayableExtensions
+        - [Method] SetAnimatedProperties
     - [Type] UnityEngine.Animations.AnimationPlayableOutput
         - [Property] Null
     - [Type] UnityEngine.Animations.AnimationScriptPlayable
@@ -53,6 +55,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] compression
         - [Property] level
         - [Property] blockSize
+    - [Type] UnityEngine.Experimental.AssetBundlePatching.AssetBundleUtility
+        - [Method] PatchAssetBundles
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll
     - [Type] UnityEngine.AudioBehaviour
     - [Type] UnityEngine.WebCamFlags
@@ -74,9 +78,27 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.Audio.AudioPlayableOutput
         - [Method] GetTarget
         - [Method] SetTarget
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll
+    - [Type] UnityEngine.ClusterSerialization
+        - [Method] SaveTimeManagerState
+        - [Method] RestoreTimeManagerState
+        - [Method] SaveInputManagerState
+        - [Method] RestoreInputManagerState
+        - [Method] SaveClusterInputState
+        - [Method] RestoreClusterInputState
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll
     - [Type] AOT.MonoPInvokeCallbackAttribute
     - [Type] UnityEngineInternal.GITextureType
+    - [Type] UnityEngineInternal.GIDebugVisualisation
+        - [Method] ResetRuntimeInputTextures
+        - [Method] PlayCycleMode
+        - [Method] PauseCycleMode
+        - [Method] StopCycleMode
+        - [Method] CycleSkipSystems
+        - [Method] CycleSkipInstances
+        - [Property] cycleMode
+        - [Property] pauseCycleMode
+        - [Property] texType
     - [Type] UnityEngineInternal.MemorylessMode
     - [Type] UnityEngineInternal.MemorylessManager
         - [Property] depthMemorylessMode
@@ -89,7 +111,12 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngineInternal.TypeInferenceRuleAttribute
     - [Type] UnityEngineInternal.GenericStack
     - [Type] Unity.Profiling.ProfilerCounterOptions
+    - [Type] Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility
+        - [Method] CreateCounterValue
+        - [Method] FlushCounterValue
     - [Type] Unity.Collections.NativeMatchesParallelForLengthAttribute
+    - [Type] Unity.Collections.NativeSliceExtensions
+        - [Method] Slice
     - [Type] JetBrains.Annotations.CanBeNullAttribute
     - [Type] JetBrains.Annotations.NotNullAttribute
     - [Type] JetBrains.Annotations.ItemNotNullAttribute
@@ -243,11 +270,15 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEngine.GameObject
         - [Method] FindGameObjectWithTag
         - [Property] gameObject
+    - [Type] UnityEngine.StackTraceUtility
+        - [Method] ExtractStackTrace
+        - [Method] ExtractStringFromException
     - [Type] UnityEngine.UnityException
     - [Type] UnityEngine.MissingComponentException
     - [Type] UnityEngine.UnassignedReferenceException
     - [Type] UnityEngine.MissingReferenceException
     - [Type] UnityEngine.TrackedReference
+    - [Type] UnityEngine.Types
     - [Type] UnityEngine.Time
         - [Property] renderedFrameCount
     - [Type] UnityEngine.UnityEventQueueSystem
@@ -282,13 +313,20 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Create
         - [Method] IsPlayableOfType
         - [Method] GetPlayableType
+    - [Type] UnityEngine.Playables.PlayableExtensions
+        - [Method] CanChangeInputs
+        - [Method] CanSetWeights
+        - [Method] CanDestroy
     - [Type] UnityEngine.Playables.PlayableHandle
         - [Property] Null
     - [Type] UnityEngine.Playables.PlayableOutput
         - [Method] IsPlayableOutputOfType
         - [Method] GetPlayableOutputType
+    - [Type] UnityEngine.Playables.PlayableOutputExtensions
+        - [Method] GetReferenceObject
     - [Type] UnityEngine.Playables.PlayableOutputHandle
         - [Property] Null
+    - [Type] UnityEngine.Diagnostics.PlayerConnection
     - [Type] UnityEngine.Experimental.Playables.CameraPlayable
         - [Method] GetCamera
         - [Method] SetCamera
@@ -303,6 +341,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] SetTarget
     - [Type] UnityEngine.Experimental.Rendering.WaitForPresentSyncPoint
     - [Type] UnityEngine.Experimental.Rendering.GraphicsJobsSyncPoint
+    - [Type] UnityEngine.Experimental.Rendering.GraphicsDeviceSettings
+        - [Property] waitForPresentSyncPoint
+        - [Property] graphicsJobsSyncPoint
     - [Type] UnityEngine.Experimental.Rendering.TextureCreationFlags
     - [Type] UnityEngine.Experimental.Rendering.GraphicsFormatUtility
         - [Method] GetGraphicsFormat
@@ -522,6 +563,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll
     - [Type] UnityEngine.ParticleSystemForceField
         - [Method] FindAll
+    - [Type] UnityEngine.ParticleSystemJobs.IParticleSystemJobExtensions
+        - [Method] Schedule
+        - [Method] ScheduleBatch
     - [Type] UnityEngine.ParticleSystemJobs.ParticleSystemNativeArray3
         - [Property] Item
     - [Type] UnityEngine.ParticleSystemJobs.ParticleSystemNativeArray4
@@ -547,6 +591,12 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] disableBackbufferMSAA
         - [Property] stereoscopicBackbuffer
         - [Property] usePBufferEGL
+    - [Type] UnityEngine.SubsystemsImplementation.SubsystemDescriptorStore
+        - [Method] RegisterDescriptor
+    - [Type] UnityEngine.SubsystemsImplementation.Extensions.SubsystemDescriptorExtensions
+        - [Method] CreateProxy
+    - [Type] UnityEngine.SubsystemsImplementation.Extensions.SubsystemExtensions
+        - [Method] GetProvider
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll
     - [Type] UnityEngine.Terrain
         - [Property] heightmapTextureFormat
@@ -567,6 +617,10 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] ScreenPointToRay
         - [Method] WorldToScreenPoint
         - [Method] CalculateRelativeRectTransformBounds
+    - [Type] UnityEngine.UISystemProfilerApi
+        - [Method] BeginSample
+        - [Method] EndSample
+        - [Method] AddMarker
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll
     - [Type] UnityEngine.UIElements.TemplateContainer
         - [Property] templateId
@@ -586,6 +640,11 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] parent
         - [Property] panel
         - [Property] Item
+    - [Type] UnityEngine.UIElements.VisualElementExtensions
+        - [Method] WorldToLocal
+        - [Method] LocalToWorld
+        - [Method] ChangeCoordinatesTo
+        - [Method] StretchToParentSize
     - [Type] UnityEngine.UIElements.VisualElementStyleSheetSet
         - [Property] Item
     - [Type] UnityEngine.UIElements.Foldout
@@ -611,6 +670,33 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] visualTreeAsset
         - [Property] slotInsertionPoints
         - [Field] Default
+    - [Type] UnityEngine.UIElements.Experimental.Easing
+        - [Method] Step
+        - [Method] Linear
+        - [Method] InSine
+        - [Method] OutSine
+        - [Method] InOutSine
+        - [Method] InQuad
+        - [Method] OutQuad
+        - [Method] InOutQuad
+        - [Method] InCubic
+        - [Method] OutCubic
+        - [Method] InOutCubic
+        - [Method] InPower
+        - [Method] OutPower
+        - [Method] InOutPower
+        - [Method] InBounce
+        - [Method] OutBounce
+        - [Method] InOutBounce
+        - [Method] InElastic
+        - [Method] OutElastic
+        - [Method] InOutElastic
+        - [Method] InBack
+        - [Method] OutBack
+        - [Method] InOutBack
+        - [Method] InCirc
+        - [Method] OutCirc
+        - [Method] InOutCirc
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll
     - [Type] UnityEngine.RemoteConfigSettings
         - [Method] QueueConfig
@@ -635,6 +721,11 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] SetCustomEventHistogramThresholds
         - [Method] ConfigureCustomEvent
         - [Method] ConfigureEvent
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll
+    - [Type] UnityEngine.WWWAudioExtensions
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll
+    - [Type] UnityEngine.VFX.VFXManager
+        - [Method] GetComponents
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll
     - [Type] UnityEngineInternal.XR.WSA.RemoteSpeechAccess
     - [Type] UnityEngine.XR.WSA.RemoteDeviceVersion
@@ -648,6 +739,22 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] GetStartDelay
         - [Method] GetPauseDelay
         - [Method] Seek
+- [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll
+    - [Type] UnityEngine.Rendering.VirtualTexturing.EditorHelpers
+        - [Method] ValidateTextureStack
+        - [Method] QuerySupportedFormats
+    - [Type] UnityEngine.Rendering.VirtualTexturing.Debugging
+        - [Method] GetNumHandles
+        - [Method] GrabHandleInfo
+        - [Method] GetInfoDump
+        - [Property] debugTilesEnabled
+        - [Property] resolvingEnabled
+        - [Property] flushEveryTickEnabled
+    - [Type] UnityEngine.Rendering.VirtualTexturing.Procedural
+        - [Method] SetCPUCacheSize
+        - [Method] GetCPUCacheSize
+        - [Method] SetGPUCacheSettings
+        - [Method] GetGPUCacheSettings
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll
     - [Type] UnityEngine.XR.XRDisplaySubsystem
         - [Property] sRGB
@@ -1056,6 +1163,12 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditorInternal.AssemblyDefinitionAsset
     - [Type] UnityEditorInternal.AssemblyDefinitionReferenceImporter
     - [Type] UnityEditorInternal.AssemblyDefinitionReferenceAsset
+    - [Type] UnityEditorInternal.Il2CppNativeCodeBuilderUtils
+        - [Method] AddBuilderArguments
+        - [Method] ClearAndPrepareCacheDirectory
+        - [Method] ClearCacheIfEditorVersionDiffers
+        - [Method] PrepareCacheDirectory
+        - [Method] ObjectFilePathInCacheDirectoryFor
     - [Type] UnityEditorInternal.ReorderableList
         - [Method] DoLayoutList
         - [Method] DoList
@@ -1107,6 +1220,15 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditorInternal.UnityEventDrawer
         - [Method] OnGUI
         - [Method] IsPersistantListenerValid
+    - [Type] UnityEditorInternal.MonoScripts
+        - [Method] CreateMonoScript
+    - [Type] UnityEditorInternal.RenderDoc
+        - [Method] IsInstalled
+        - [Method] IsLoaded
+        - [Method] IsSupported
+        - [Method] Load
+        - [Method] BeginCaptureRenderDoc
+        - [Method] EndCaptureRenderDoc
     - [Type] UnityEditorInternal.ProfilerFrameDataMultiColumnHeader
         - [Method] GetMultiColumnHeaderIndex
         - [Method] GetProfilerColumn
@@ -1208,6 +1330,57 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] objectInstanceId
         - [Field] nameOffset
         - [Field] frame
+    - [Type] UnityEditorInternal.ProfilerDriver
+        - [Method] ClearAllFrames
+        - [Method] GetNextFrameIndex
+        - [Method] GetPreviousFrameIndex
+        - [Method] SetAreaEnabled
+        - [Method] IsAreaEnabled
+        - [Method] SetMarkerFiltering
+        - [Method] GetUISystemEventMarkersCount
+        - [Method] GetUISystemEventMarkersBatch
+        - [Method] GetFormattedCounterValue
+        - [Method] GetCounterValuesBatch
+        - [Method] GetGpuStatisticsAvailabilityStates
+        - [Method] GetGpuStatisticsAvailabilityState
+        - [Method] GetHierarchyFrameDataView
+        - [Method] GetRawFrameDataView
+        - [Method] SaveProfile
+        - [Method] LoadProfile
+        - [Method] GetAllStatisticsProperties
+        - [Method] GetGraphStatisticsPropertiesForArea
+        - [Method] GetStatisticsAvailable
+        - [Method] GetStatisticsIdentifierForArea
+        - [Method] GetConnectionIdentifier
+        - [Method] IsIdentifierConnectable
+        - [Method] DirectIPConnect
+        - [Method] DirectURLConnect
+        - [Method] GetAvailableProfilers
+        - [Method] GetOverviewText
+        - [Method] RequestMemorySnapshot
+        - [Method] RequestObjectMemoryInfo
+        - [Method] QueryInstrumentableFunctions
+        - [Method] QueryFunctionCallees
+        - [Method] SetAutoInstrumentedAssemblies
+        - [Method] SetAudioCaptureFlags
+        - [Method] BeginInstrumentFunction
+        - [Method] EndInstrumentFunction
+        - [Property] firstFrameIndex
+        - [Property] lastFrameIndex
+        - [Property] selectedPropertyPath
+        - [Property] enabled
+        - [Property] profileGPU
+        - [Property] profileEditor
+        - [Property] deepProfiling
+        - [Property] memoryRecordMode
+        - [Property] directConnectionUrl
+        - [Property] connectedProfiler
+        - [Property] miniMemoryOverview
+        - [Property] usedHeapSize
+        - [Property] objectCount
+        - [Event] NewProfilerFrameRecorded
+        - [Event] profileLoaded
+        - [Field] directConnectionPort
     - [Type] UnityEditorInternal.ProfilerFrameDataIterator
         - [Method] Next
         - [Method] GetThreadCount
@@ -1417,6 +1590,9 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] inspectorMode
         - [Property] hasComponentsWhichCannotBeMultiEdited
         - [Property] sharedTracker
+    - [Type] UnityEditor.ArrayUtility
+        - [Method] FindAll
+        - [Method] Find
     - [Type] UnityEditor.BuildPipeline
         - [Method] GetBuildTargetGroup
     - [Type] UnityEditor.BuildPlayerWindow
@@ -1567,6 +1743,16 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.SerializedProperty
         - [Property] isAnimated
         - [Property] objectReferenceInstanceIDValue
+    - [Type] UnityEditor.StaticOcclusionCulling
+        - [Method] SetDefaultOcclusionBakeSettings
+        - [Property] smallestOccluder
+        - [Property] smallestHole
+        - [Property] backfaceThreshold
+    - [Type] UnityEditor.StaticOcclusionCullingVisualization
+        - [Property] showDynamicObjectBounds
+        - [Property] isPreviewOcclusionCullingCameraInPVS
+        - [Property] previewOcclusionCamera
+        - [Property] previewOcclucionCamera
     - [Type] UnityEditor.UnityStats
         - [Property] batches
         - [Property] drawCalls
@@ -1602,6 +1788,55 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] visibleSkinnedMeshes
         - [Property] animationComponentsPlaying
         - [Property] animatorComponentsPlaying
+    - [Type] UnityEditor.Unsupported
+        - [Method] CaptureScreenshotImmediate
+        - [Method] GetSubmenusCommands
+        - [Method] GetTypeFromFullName
+        - [Method] GetSubmenus
+        - [Method] GetSubmenusIncludingSeparators
+        - [Method] PrepareObjectContextMenu
+        - [Method] IsDeveloperBuild
+        - [Method] IsDeveloperMode
+        - [Method] IsSourceBuild
+        - [Method] IsBleedingEdgeBuild
+        - [Method] IsDestroyScriptableObject
+        - [Method] IsNativeCodeBuiltInReleaseMode
+        - [Method] GetBaseUnityDeveloperFolder
+        - [Method] StopPlayingImmediately
+        - [Method] SceneTrackerFlushDirty
+        - [Method] SetAllowCursorHide
+        - [Method] SetOverrideLightingSettings
+        - [Method] RestoreOverrideLightingSettings
+        - [Method] SetRenderSettingsUseFogNoDirty
+        - [Method] SetSceneViewDebugModeExposureNoDirty
+        - [Method] SetQualitySettingsShadowDistanceTemporarily
+        - [Method] DeleteGameObjectSelection
+        - [Method] CopyGameObjectsToPasteboard
+        - [Method] PasteGameObjectsFromPasteboard
+        - [Method] GetSerializedAssetInterfaceSingleton
+        - [Method] DuplicateGameObjectsUsingPasteboard
+        - [Method] CopyComponentToPasteboard
+        - [Method] PasteComponentFromPasteboard
+        - [Method] PasteComponentValuesFromPasteboard
+        - [Method] HasStateMachineTransitionDataInPasteboard
+        - [Method] AreAllParametersInDestination
+        - [Method] DestinationHasCompatibleParameterTypes
+        - [Method] CanPasteParametersToTransition
+        - [Method] CopyStateMachineTransitionParametersToPasteboard
+        - [Method] PasteToStateMachineTransitionParametersFromPasteboard
+        - [Method] CopyStateMachineDataToPasteboard
+        - [Method] PasteToStateMachineFromPasteboard
+        - [Method] HasStateMachineDataInPasteboard
+        - [Method] SmartReset
+        - [Method] ResolveSymlinks
+        - [Method] ResolveRedirectedPath
+        - [Method] SetApplicationSettingCompressAssetsOnImport
+        - [Method] GetApplicationSettingCompressAssetsOnImport
+        - [Method] GetLocalIdentifierInFileForPersistentObject
+        - [Method] IsHiddenFile
+        - [Method] ClearSkinCache
+        - [Method] GetRenderSettings
+        - [Property] useScriptableRenderPipeline
     - [Type] UnityEditor.ExternalVersionControl
         - [Field] Disabled
         - [Field] AutoDetect
@@ -1683,6 +1918,22 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Field] args
         - [Field] result
         - [Field] hint
+    - [Type] UnityEditor.CommandService
+        - [Method] GetCommandLabel
+        - [Method] RegisterCommand
+        - [Method] UnregisterCommand
+        - [Method] Exists
+        - [Method] Execute
+    - [Type] UnityEditor.ModeService
+        - [Method] ChangeModeById
+        - [Method] Update
+        - [Method] HasContextMenu
+        - [Method] PopupContextMenu
+        - [Property] modeNames
+        - [Property] modeCount
+        - [Property] currentId
+        - [Property] currentIndex
+        - [Event] modeChanged
     - [Type] UnityEditor.GameViewSizeGroupType
     - [Type] UnityEditor.EditorMaterialUtility
         - [Method] ResetDefaultTextures
@@ -1734,6 +1985,13 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] UnityEditor.PhysicsDebugWindow
         - [Method] ShowWindow
         - [Method] OnEnable
+    - [Type] UnityEditor.SceneModeUtility
+        - [Method] GetSelectedObjectsOfType
+        - [Method] SearchForType
+        - [Method] SearchBar
+        - [Method] StaticFlagField
+        - [Method] SetStaticFlags
+        - [Method] GetObjects
     - [Type] UnityEditor.SceneView
         - [Method] FrameLastActiveSceneViewWithLock
         - [Method] OnDestroy
@@ -1774,6 +2032,16 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Insert
         - [Method] Find
         - [Method] ClearTemplate
+    - [Type] UnityEditor.L10n
+        - [Method] TrPath
+        - [Method] TextContent
+        - [Method] TextContentWithIcon
+        - [Method] IconContent
+        - [Method] TempContent
+    - [Type] UnityEditor.PhysicsVisualizationSettings
+        - [Method] PickClosestGameObject
+        - [Property] dotAlpha
+        - [Property] forceDot
     - [Type] UnityEditor.XR.BootOptions
         - [Method] SetXRSDKPreInitLibrary
     - [Type] UnityEditor.MPE.ChannelInfo
@@ -1806,8 +2074,28 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Dispose
         - [Property] userIdentifier
         - [Property] progressMessage
+    - [Type] UnityEditor.Connect.UnityOAuth
+        - [Method] GetAuthorizationCodeAsync
+        - [Event] UserLoggedIn
+        - [Event] UserLoggedOut
+    - [Type] UnityEditor.Macros.MacroEvaluator
+        - [Method] Eval
+    - [Type] UnityEditor.Macros.MethodEvaluator
+        - [Method] Eval
+        - [Method] ExecuteExternalCode
+    - [Type] UnityEditor.AI.NavMeshEditorHelpers
+        - [Method] OpenAgentSettings
+        - [Method] OpenAreaSettings
+        - [Method] DrawAgentDiagram
     - [Type] UnityEditor.AI.NavMeshBuilder
         - [Property] navMeshSettingsObject
+    - [Type] UnityEditor.VisualStudioIntegration.SolutionGuidGenerator
+        - [Method] GuidForProject
+        - [Method] GuidForSolution
+    - [Type] UnityEditor.Build.Player.PlayerBuildInterface
+        - [Field] ExtraTypesProvider
+    - [Type] UnityEditor.Build.Player.TypeDbHelper
+        - [Method] TryGet
     - [Type] UnityEditor.Audio.AudioMixerEffectPlugin
     - [Type] UnityEditor.Hardware.UsbDevice
         - [Field] vendorId
@@ -1834,9 +2122,22 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] FindDevice
         - [Method] GetDevices
         - [Event] Changed
+    - [Type] UnityEditor.UIElements.UIElementsEntryPoint
+        - [Method] SetAntiAliasing
+        - [Method] GetAntiAliasing
     - [Type] UnityEditor.SceneManagement.EditorSceneManager
         - [Method] IsReloading
         - [Property] loadedRootSceneCount
+    - [Type] UnityEditor.SceneManagement.SceneHierarchyHooks
+        - [Method] ReloadAllSceneHierarchies
+        - [Method] CanSetNewParent
+        - [Method] CanMoveTransformToScene
+        - [Event] addItemsToGameObjectContextMenu
+        - [Event] addItemsToSceneHeaderContextMenu
+        - [Event] addItemsToSubSceneHeaderContextMenu
+        - [Event] addItemsToCreateMenu
+        - [Field] provideSubScenes
+        - [Field] provideSubSceneName
     - [Type] UnityEditor.SceneManagement.SceneSetup
         - [Property] isSubScene
     - [Type] UnityEditor.AssetImporters.FBXMaterialDescriptionPreprocessor
@@ -1845,6 +2146,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] OnPreprocessMaterialDescription
     - [Type] UnityEditor.AssetImporters.ThreeDSMaterialDescriptionPreprocessor
         - [Method] OnPreprocessMaterialDescription
+    - [Type] UnityEditor.Experimental.BuildPipelineExperimental
+        - [Method] GetSessionIdForBuildTarget
     - [Type] UnityEditor.Experimental.EditorResources
         - [Method] Load
         - [Method] GetAssetPath
@@ -1896,6 +2199,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll
     - [Type] UnityEditorInternal.PackageManifestImporter
     - [Type] UnityEditorInternal.PackageManifest
+    - [Type] UnityEditor.PackageManager.UI.Window
+        - [Method] Open
 - [Assembly] Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll
     - [Type] UnityEditor.UIElements.PropertyField
         - [Property] binding
@@ -2103,6 +2408,8 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] ExCSS.Whitespace
     - [Type] System.Tuple
         - [Method] Create
+    - [Type] System.StringBuilderExt
+        - [Method] Clear
     - [Type] ExCSS.StylesheetParseError
         - [Property] ParserError
         - [Property] Line
@@ -2122,6 +2429,11 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] SupportsDirectives
         - [Property] NamespaceDirectives
         - [Property] Errors
+    - [Type] ExCSS.Model.Extensions.StringExtensions
+        - [Method] Indent
+        - [Method] NewLineIndent
+        - [Method] TrimFirstLine
+        - [Method] TrimLastLine
     - [Type] ExCSS.MediaTypeList
         - [Property] Item
         - [Property] Count
@@ -2851,6 +3163,226 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] OperandType
         - [Property] StackBehaviourPop
         - [Property] StackBehaviourPush
+    - [Type] Mono.Cecil.Cil.OpCodes
+        - [Field] Nop
+        - [Field] Break
+        - [Field] Ldarg_0
+        - [Field] Ldarg_1
+        - [Field] Ldarg_2
+        - [Field] Ldarg_3
+        - [Field] Ldloc_0
+        - [Field] Ldloc_1
+        - [Field] Ldloc_2
+        - [Field] Ldloc_3
+        - [Field] Stloc_0
+        - [Field] Stloc_1
+        - [Field] Stloc_2
+        - [Field] Stloc_3
+        - [Field] Ldarg_S
+        - [Field] Ldarga_S
+        - [Field] Starg_S
+        - [Field] Ldloc_S
+        - [Field] Ldloca_S
+        - [Field] Stloc_S
+        - [Field] Ldnull
+        - [Field] Ldc_I4_M1
+        - [Field] Ldc_I4_0
+        - [Field] Ldc_I4_1
+        - [Field] Ldc_I4_2
+        - [Field] Ldc_I4_3
+        - [Field] Ldc_I4_4
+        - [Field] Ldc_I4_5
+        - [Field] Ldc_I4_6
+        - [Field] Ldc_I4_7
+        - [Field] Ldc_I4_8
+        - [Field] Ldc_I4_S
+        - [Field] Ldc_I4
+        - [Field] Ldc_I8
+        - [Field] Ldc_R4
+        - [Field] Ldc_R8
+        - [Field] Dup
+        - [Field] Pop
+        - [Field] Jmp
+        - [Field] Call
+        - [Field] Calli
+        - [Field] Ret
+        - [Field] Br_S
+        - [Field] Brfalse_S
+        - [Field] Brtrue_S
+        - [Field] Beq_S
+        - [Field] Bge_S
+        - [Field] Bgt_S
+        - [Field] Ble_S
+        - [Field] Blt_S
+        - [Field] Bne_Un_S
+        - [Field] Bge_Un_S
+        - [Field] Bgt_Un_S
+        - [Field] Ble_Un_S
+        - [Field] Blt_Un_S
+        - [Field] Br
+        - [Field] Brfalse
+        - [Field] Brtrue
+        - [Field] Beq
+        - [Field] Bge
+        - [Field] Bgt
+        - [Field] Ble
+        - [Field] Blt
+        - [Field] Bne_Un
+        - [Field] Bge_Un
+        - [Field] Bgt_Un
+        - [Field] Ble_Un
+        - [Field] Blt_Un
+        - [Field] Switch
+        - [Field] Ldind_I1
+        - [Field] Ldind_U1
+        - [Field] Ldind_I2
+        - [Field] Ldind_U2
+        - [Field] Ldind_I4
+        - [Field] Ldind_U4
+        - [Field] Ldind_I8
+        - [Field] Ldind_I
+        - [Field] Ldind_R4
+        - [Field] Ldind_R8
+        - [Field] Ldind_Ref
+        - [Field] Stind_Ref
+        - [Field] Stind_I1
+        - [Field] Stind_I2
+        - [Field] Stind_I4
+        - [Field] Stind_I8
+        - [Field] Stind_R4
+        - [Field] Stind_R8
+        - [Field] Add
+        - [Field] Sub
+        - [Field] Mul
+        - [Field] Div
+        - [Field] Div_Un
+        - [Field] Rem
+        - [Field] Rem_Un
+        - [Field] And
+        - [Field] Or
+        - [Field] Xor
+        - [Field] Shl
+        - [Field] Shr
+        - [Field] Shr_Un
+        - [Field] Neg
+        - [Field] Not
+        - [Field] Conv_I1
+        - [Field] Conv_I2
+        - [Field] Conv_I4
+        - [Field] Conv_I8
+        - [Field] Conv_R4
+        - [Field] Conv_R8
+        - [Field] Conv_U4
+        - [Field] Conv_U8
+        - [Field] Callvirt
+        - [Field] Cpobj
+        - [Field] Ldobj
+        - [Field] Ldstr
+        - [Field] Newobj
+        - [Field] Castclass
+        - [Field] Isinst
+        - [Field] Conv_R_Un
+        - [Field] Unbox
+        - [Field] Throw
+        - [Field] Ldfld
+        - [Field] Ldflda
+        - [Field] Stfld
+        - [Field] Ldsfld
+        - [Field] Ldsflda
+        - [Field] Stsfld
+        - [Field] Stobj
+        - [Field] Conv_Ovf_I1_Un
+        - [Field] Conv_Ovf_I2_Un
+        - [Field] Conv_Ovf_I4_Un
+        - [Field] Conv_Ovf_I8_Un
+        - [Field] Conv_Ovf_U1_Un
+        - [Field] Conv_Ovf_U2_Un
+        - [Field] Conv_Ovf_U4_Un
+        - [Field] Conv_Ovf_U8_Un
+        - [Field] Conv_Ovf_I_Un
+        - [Field] Conv_Ovf_U_Un
+        - [Field] Box
+        - [Field] Newarr
+        - [Field] Ldlen
+        - [Field] Ldelema
+        - [Field] Ldelem_I1
+        - [Field] Ldelem_U1
+        - [Field] Ldelem_I2
+        - [Field] Ldelem_U2
+        - [Field] Ldelem_I4
+        - [Field] Ldelem_U4
+        - [Field] Ldelem_I8
+        - [Field] Ldelem_I
+        - [Field] Ldelem_R4
+        - [Field] Ldelem_R8
+        - [Field] Ldelem_Ref
+        - [Field] Stelem_I
+        - [Field] Stelem_I1
+        - [Field] Stelem_I2
+        - [Field] Stelem_I4
+        - [Field] Stelem_I8
+        - [Field] Stelem_R4
+        - [Field] Stelem_R8
+        - [Field] Stelem_Ref
+        - [Field] Ldelem_Any
+        - [Field] Stelem_Any
+        - [Field] Unbox_Any
+        - [Field] Conv_Ovf_I1
+        - [Field] Conv_Ovf_U1
+        - [Field] Conv_Ovf_I2
+        - [Field] Conv_Ovf_U2
+        - [Field] Conv_Ovf_I4
+        - [Field] Conv_Ovf_U4
+        - [Field] Conv_Ovf_I8
+        - [Field] Conv_Ovf_U8
+        - [Field] Refanyval
+        - [Field] Ckfinite
+        - [Field] Mkrefany
+        - [Field] Ldtoken
+        - [Field] Conv_U2
+        - [Field] Conv_U1
+        - [Field] Conv_I
+        - [Field] Conv_Ovf_I
+        - [Field] Conv_Ovf_U
+        - [Field] Add_Ovf
+        - [Field] Add_Ovf_Un
+        - [Field] Mul_Ovf
+        - [Field] Mul_Ovf_Un
+        - [Field] Sub_Ovf
+        - [Field] Sub_Ovf_Un
+        - [Field] Endfinally
+        - [Field] Leave
+        - [Field] Leave_S
+        - [Field] Stind_I
+        - [Field] Conv_U
+        - [Field] Arglist
+        - [Field] Ceq
+        - [Field] Cgt
+        - [Field] Cgt_Un
+        - [Field] Clt
+        - [Field] Clt_Un
+        - [Field] Ldftn
+        - [Field] Ldvirtftn
+        - [Field] Ldarg
+        - [Field] Ldarga
+        - [Field] Starg
+        - [Field] Ldloc
+        - [Field] Ldloca
+        - [Field] Stloc
+        - [Field] Localloc
+        - [Field] Endfilter
+        - [Field] Unaligned
+        - [Field] Volatile
+        - [Field] Tail
+        - [Field] Initobj
+        - [Field] Constrained
+        - [Field] Cpblk
+        - [Field] Initblk
+        - [Field] No
+        - [Field] Rethrow
+        - [Field] Sizeof
+        - [Field] Refanytype
+        - [Field] Readonly
     - [Type] Mono.Cecil.Cil.PortablePdbReaderProvider
     - [Type] Mono.Cecil.Cil.PortablePdbReader
     - [Type] Mono.Cecil.Cil.EmbeddedPortablePdbReaderProvider
@@ -2979,6 +3511,19 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Method] Add
         - [Method] Remove
         - [Method] Resolve
+    - [Type] Unity.SerializationLogic.UnitySerializationLogic
+        - [Method] WillUnitySerialize
+        - [Method] ShouldFieldBePPtrRemapped
+        - [Method] HasSerializeFieldAttribute
+        - [Method] HasSerializeReferenceAttribute
+        - [Method] ShouldNotTryToResolve
+        - [Method] IsFixedBuffer
+        - [Method] GetFixedBufferAttribute
+        - [Method] GetFixedBufferLength
+        - [Method] PrimitiveTypeSize
+        - [Method] IsSupportedCollection
+        - [Method] IsNonSerialized
+        - [Method] ShouldImplementIDeserializable
 - [Assembly] Editor/Data/Managed/Unity.CompilationPipeline.Common.dll
     - [Type] Unity.CompilationPipeline.Common.CodeOptimization
     - [Type] Unity.CompilationPipeline.Common.AssemblyInfo
@@ -3063,6 +3608,23 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] Newtonsoft.Json.JsonArrayAttribute
         - [Property] AllowNullItems
     - [Type] Newtonsoft.Json.JsonConstructorAttribute
+    - [Type] Newtonsoft.Json.JsonConvert
+        - [Method] SerializeObject
+        - [Method] DeserializeObject
+        - [Method] DeserializeAnonymousType
+        - [Method] PopulateObject
+        - [Method] SerializeXmlNode
+        - [Method] DeserializeXmlNode
+        - [Method] SerializeXNode
+        - [Method] DeserializeXNode
+        - [Property] DefaultSettings
+        - [Field] True
+        - [Field] False
+        - [Field] Null
+        - [Field] Undefined
+        - [Field] PositiveInfinity
+        - [Field] NegativeInfinity
+        - [Field] NaN
     - [Type] Newtonsoft.Json.JsonConverterAttribute
         - [Property] ConverterType
         - [Property] ConverterParameters
@@ -3290,6 +3852,16 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
     - [Type] Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy
     - [Type] Newtonsoft.Json.Linq.CommentHandling
     - [Type] Newtonsoft.Json.Linq.LineInfoHandling
+    - [Type] Newtonsoft.Json.Linq.Extensions
+        - [Method] Ancestors
+        - [Method] AncestorsAndSelf
+        - [Method] Descendants
+        - [Method] DescendantsAndSelf
+        - [Method] Properties
+        - [Method] Values
+        - [Method] Value
+        - [Method] Children
+        - [Method] AsJEnumerable
     - [Type] Newtonsoft.Json.Linq.JArray
         - [Method] Load
         - [Method] Parse
@@ -3360,4 +3932,24 @@ Non-public, interface, abstract, generic, nested, delegate and obsoleted items a
         - [Property] DeserializeRootElementName
         - [Property] WriteArrayAttribute
         - [Property] OmitRootObject
+- [Assembly] Editor/Data/Managed/Unity.CecilTools.dll
+    - [Type] Unity.CecilTools.CecilUtils
+        - [Method] FindInTypeExplicitImplementationFor
+        - [Method] AllInterfacesImplementedBy
+        - [Method] TypeAndBaseTypesOf
+        - [Method] BaseTypesOf
+        - [Method] IsGenericList
+        - [Method] IsGenericDictionary
+        - [Method] ElementTypeOfCollection
+    - [Type] Unity.CecilTools.ElementType
+        - [Method] For
+    - [Type] Unity.CecilTools.Extensions.ResolutionExtensions
+        - [Method] CheckedResolve
+    - [Type] Unity.CecilTools.Extensions.TypeDefinitionExtensions
+        - [Method] IsSubclassOf
+    - [Type] Unity.CecilTools.Extensions.TypeReferenceExtensions
+        - [Method] SafeNamespace
+        - [Method] IsAssignableTo
+        - [Method] IsEnum
+        - [Method] IsStruct
 

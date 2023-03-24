@@ -43,7 +43,8 @@ public static class CollectUndocumentedAPIs
             foreach (var type in assembly.GetTypes())
             {
                 // Ignore nested types and totally obsoleted types
-                if (!type.IsPublic || type.IsInterface || type.IsAbstract || type.IsGenericType ||
+                // The static class is both abstract and sealed
+                if (!type.IsPublic || type.IsInterface || (type.IsAbstract && !type.IsSealed) || type.IsGenericType ||
                     type.BaseType == typeof(MulticastDelegate) ||
                     type.GetCustomAttribute<ObsoleteAttribute>() != null)
                 {
