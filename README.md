@@ -38,7 +38,7 @@ UnityEngine.Scripting.APIUpdating.MovedFromAttribute
 ```
 
 ---
-**Save/Load asset to/from Library folder:**
+**Read/Write assets in Library/ProjectSettings/UserSettings folder:**
 
 ```csharp
 UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget()
