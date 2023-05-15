@@ -29,6 +29,43 @@ void ShowButton(Rect position)
 ![Header Button](./images/img_window_header_button.png)
 
 ---
+**Open asset in a custom EditorWindow when double-clicking:**
+
+```csharp
+[CreateAssetMenu(fileName = nameof(MyCustomAsset), menuName = "Tests/My Custom Asset")]
+public class MyCustomAsset : ScriptableObject { }
+
+public class MyCustomAssetEditorWindow : EditorWindow
+{
+    [OnOpenAsset]
+    static bool OnOpenAsset(int instanceID, int line, int column)
+    {
+        if (EditorUtility.InstanceIDToObject(instanceID) is MyCustomAsset myAsset)
+        {
+            var window = GetWindow<MyCustomAssetEditorWindow>();
+            window.SetTarget(myAsset);
+            window.Focus();
+
+            // Returning true indicates that the open operation has been processed
+            // and the callback is not continued.
+            return true;
+        }
+
+        // Returning false indicates that the open operation cannot be handled here,
+        // and other methods in the callback should be continued.
+        return false;
+    }
+
+    public void SetTarget(MyCustomAsset target)
+    {
+        // Do anything you want here.
+        titleContent = new GUIContent(target.name);
+        Debug.Log($"Open {target}.");
+    }
+}
+```
+
+---
 **Keep serialized data after changing name or namespace of type:**
 
 *Similar to `UnityEngine.Serialization.FormerlySerializedAsAttribute` .*
