@@ -67,6 +67,13 @@ public class MyCustomAssetEditorWindow : EditorWindow
 ```
 
 ---
+**Modify menu items dynamically, no need for MenuItemAttribute:**
+
+The `UnityEditor.Menu` class provides some methods for dynamically managing menu items, but these methods are `internal` and can be called through reflection.
+
+Here is a utility class that simplifies reflection: [DynamicMenuItem.cs](https://gist.github.com/SolarianZ/e20ee9aa0c0caaa2aff6ced6a07d7a00).
+
+---
 **Keep serialized data after changing name or namespace of type:**
 
 *Similar to `UnityEngine.Serialization.FormerlySerializedAsAttribute` .*
