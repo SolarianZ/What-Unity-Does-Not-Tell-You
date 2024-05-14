@@ -91,6 +91,8 @@ UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget()
 UnityEditorInternal.InternalEditorUtility.SaveToSerializedFileAndForget()
 ```
 
+Usually, the `UnityEditor.ScriptableSingleton<T>` type can be used to create a singleton configuration asset stored in the Library folder, eliminating the need to use the above two methods.
+
 ---
 **Many helpful editor utility functions:**
 
