@@ -10,8 +10,8 @@ What-Unity-Does-Not-Tell-You
 
 - [Unity 2022.3.0f1 Undocumented APIs](./Unity_2022.3.0f1_Undocumented_APIs.md)
 - [Unity 2021.3.0f1 Undocumented APIs](./Unity_2021.3.0f1_Undocumented_APIs.md)
-- [Unity 2020.3.0f1 Undocumented APIs](./Unity_2020.3.0f1_Undocumented_APIs.md)
-- [Unity 2019.4.0f1 Undocumented APIs](./Unity_2019.4.0f1_Undocumented_APIs.md)
+- [Unity 2020.3.48f1 Undocumented APIs](./Unity_2020.3.48f1_Undocumented_APIs.md)
+- [Unity 2019.4.40f1 Undocumented APIs](./Unity_2019.4.40f1_Undocumented_APIs.md)
 
 
 ## Frequently Used APIs
