@@ -14,7 +14,8 @@ public class HeaderButtonSampleWindow : EditorWindow
     private void ShowButton(Rect position)
     {
         // draw button
-        if (GUI.Button(position, EditorGUIUtility.IconContent("_Help"), GUI.skin.FindStyle("IconButton")))
+        // For Unity 2021.1 and earlier version, use `GUI.skin.FindStyle("IconButton")`
+        if (GUI.Button(position, EditorGUIUtility.IconContent("_Help"), EditorStyles.iconButton))
         {
             Application.OpenURL("https://docs.unity3d.com/Manual/index.html");
         }
